@@ -1,5 +1,5 @@
 //
-//  Question.h
+//  BadAnswer.h
 //  QCMapp
 //
 //  Created by etudiant on 07/03/2016.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Question : NSObject
+@interface BadAnswer : NSObject
 
-@property NSString* textQuestion;
-//@property long idType;
-//@property long idQcm;
+@property NSString* badAnswerQuestion;
 
 @end

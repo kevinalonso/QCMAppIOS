@@ -11,7 +11,6 @@
 		EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D761C8DAE6800DB81DD /* AppDelegate.m */; };
 		EC6B5D7A1C8DAE6800DB81DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D791C8DAE6800DB81DD /* ViewController.m */; };
 		EC6B5D7D1C8DAE6800DB81DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5D7B1C8DAE6800DB81DD /* Main.storyboard */; };
-		EC6B5D801C8DAE6800DB81DD /* QCMapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D7E1C8DAE6800DB81DD /* QCMapp.xcdatamodeld */; };
 		EC6B5D821C8DAE6800DB81DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5D811C8DAE6800DB81DD /* Assets.xcassets */; };
 		EC6B5D851C8DAE6800DB81DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5D831C8DAE6800DB81DD /* LaunchScreen.storyboard */; };
 		EC6B5D901C8DAE6800DB81DD /* QCMappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D8F1C8DAE6800DB81DD /* QCMappTests.m */; };
@@ -19,6 +18,13 @@
 		EC6B5DA01C8DB18900DB81DD /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D9F1C8DB18900DB81DD /* Question.m */; };
 		EC6B5DA31C8DB2AA00DB81DD /* GoodAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DA21C8DB2AA00DB81DD /* GoodAnswer.m */; };
 		EC6B5DA71C8DB33000DB81DD /* DAOQcm.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DA61C8DB33000DB81DD /* DAOQcm.m */; };
+		EC6B5DAB1C8DBCCF00DB81DD /* QcmData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DA91C8DBCCF00DB81DD /* QcmData.xcdatamodeld */; };
+		EC6B5DAE1C8DC17F00DB81DD /* DAOQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DAD1C8DC17F00DB81DD /* DAOQuestion.m */; };
+		EC6B5DB11C8DC4EE00DB81DD /* DAOGoodAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DB01C8DC4EE00DB81DD /* DAOGoodAnswer.m */; };
+		EC6B5DB41C8DCFE200DB81DD /* BadAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DB31C8DCFE200DB81DD /* BadAnswer.m */; };
+		EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DB61C8DD07900DB81DD /* DAOBadAnswer.m */; };
+		EC6B5DBA1C8DD33D00DB81DD /* AnswerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */; };
+		EC6B5DBD1C8DD43800DB81DD /* DAOAnswerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DBC1C8DD43800DB81DD /* DAOAnswerUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,6 @@
 		EC6B5D781C8DAE6800DB81DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC6B5D791C8DAE6800DB81DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC6B5D7C1C8DAE6800DB81DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC6B5D7F1C8DAE6800DB81DD /* QCMapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QCMapp.xcdatamodel; sourceTree = "<group>"; };
 		EC6B5D811C8DAE6800DB81DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC6B5D841C8DAE6800DB81DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC6B5D861C8DAE6800DB81DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +59,19 @@
 		EC6B5DA21C8DB2AA00DB81DD /* GoodAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoodAnswer.m; path = entity/GoodAnswer.m; sourceTree = "<group>"; };
 		EC6B5DA51C8DB33000DB81DD /* DAOQcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOQcm.h; path = crud/DAOQcm.h; sourceTree = "<group>"; };
 		EC6B5DA61C8DB33000DB81DD /* DAOQcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOQcm.m; path = crud/DAOQcm.m; sourceTree = "<group>"; };
+		EC6B5DAA1C8DBCCF00DB81DD /* QcmData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QcmData.xcdatamodel; sourceTree = "<group>"; };
+		EC6B5DAC1C8DC17F00DB81DD /* DAOQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOQuestion.h; path = crud/DAOQuestion.h; sourceTree = "<group>"; };
+		EC6B5DAD1C8DC17F00DB81DD /* DAOQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOQuestion.m; path = crud/DAOQuestion.m; sourceTree = "<group>"; };
+		EC6B5DAF1C8DC4EE00DB81DD /* DAOGoodAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOGoodAnswer.h; path = crud/DAOGoodAnswer.h; sourceTree = "<group>"; };
+		EC6B5DB01C8DC4EE00DB81DD /* DAOGoodAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOGoodAnswer.m; path = crud/DAOGoodAnswer.m; sourceTree = "<group>"; };
+		EC6B5DB21C8DCFE200DB81DD /* BadAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadAnswer.h; sourceTree = "<group>"; };
+		EC6B5DB31C8DCFE200DB81DD /* BadAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadAnswer.m; sourceTree = "<group>"; };
+		EC6B5DB51C8DD07900DB81DD /* DAOBadAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOBadAnswer.h; sourceTree = "<group>"; };
+		EC6B5DB61C8DD07900DB81DD /* DAOBadAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOBadAnswer.m; sourceTree = "<group>"; };
+		EC6B5DB81C8DD33D00DB81DD /* AnswerUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerUser.h; sourceTree = "<group>"; };
+		EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerUser.m; sourceTree = "<group>"; };
+		EC6B5DBB1C8DD43800DB81DD /* DAOAnswerUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOAnswerUser.h; sourceTree = "<group>"; };
+		EC6B5DBC1C8DD43800DB81DD /* DAOAnswerUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOAnswerUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +95,6 @@
 		EC6B5D661C8DAE6800DB81DD = {
 			isa = PBXGroup;
 			children = (
-				EC6B5DA41C8DB2FF00DB81DD /* crud */,
 				EC6B5D711C8DAE6800DB81DD /* QCMapp */,
 				EC6B5D8E1C8DAE6800DB81DD /* QCMappTests */,
 				EC6B5D701C8DAE6800DB81DD /* Products */,
@@ -97,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				EC6B5D9A1C8DAF9600DB81DD /* entity */,
+				EC6B5DA81C8DBC9C00DB81DD /* data */,
+				EC6B5DA41C8DB2FF00DB81DD /* crud */,
 				EC6B5D751C8DAE6800DB81DD /* AppDelegate.h */,
 				EC6B5D761C8DAE6800DB81DD /* AppDelegate.m */,
 				EC6B5D781C8DAE6800DB81DD /* ViewController.h */,
@@ -105,7 +124,6 @@
 				EC6B5D811C8DAE6800DB81DD /* Assets.xcassets */,
 				EC6B5D831C8DAE6800DB81DD /* LaunchScreen.storyboard */,
 				EC6B5D861C8DAE6800DB81DD /* Info.plist */,
-				EC6B5D7E1C8DAE6800DB81DD /* QCMapp.xcdatamodeld */,
 				EC6B5D721C8DAE6800DB81DD /* Supporting Files */,
 			);
 			path = QCMapp;
@@ -137,6 +155,10 @@
 				EC6B5D9F1C8DB18900DB81DD /* Question.m */,
 				EC6B5DA11C8DB2AA00DB81DD /* GoodAnswer.h */,
 				EC6B5DA21C8DB2AA00DB81DD /* GoodAnswer.m */,
+				EC6B5DB21C8DCFE200DB81DD /* BadAnswer.h */,
+				EC6B5DB31C8DCFE200DB81DD /* BadAnswer.m */,
+				EC6B5DB81C8DD33D00DB81DD /* AnswerUser.h */,
+				EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -146,8 +168,25 @@
 			children = (
 				EC6B5DA51C8DB33000DB81DD /* DAOQcm.h */,
 				EC6B5DA61C8DB33000DB81DD /* DAOQcm.m */,
+				EC6B5DAC1C8DC17F00DB81DD /* DAOQuestion.h */,
+				EC6B5DAD1C8DC17F00DB81DD /* DAOQuestion.m */,
+				EC6B5DAF1C8DC4EE00DB81DD /* DAOGoodAnswer.h */,
+				EC6B5DB01C8DC4EE00DB81DD /* DAOGoodAnswer.m */,
+				EC6B5DB51C8DD07900DB81DD /* DAOBadAnswer.h */,
+				EC6B5DB61C8DD07900DB81DD /* DAOBadAnswer.m */,
+				EC6B5DBB1C8DD43800DB81DD /* DAOAnswerUser.h */,
+				EC6B5DBC1C8DD43800DB81DD /* DAOAnswerUser.m */,
 			);
 			name = crud;
+			sourceTree = "<group>";
+		};
+		EC6B5DA81C8DBC9C00DB81DD /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DA91C8DBCCF00DB81DD /* QcmData.xcdatamodeld */,
+			);
+			name = data;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,13 +289,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6B5DB11C8DC4EE00DB81DD /* DAOGoodAnswer.m in Sources */,
 				EC6B5DA71C8DB33000DB81DD /* DAOQcm.m in Sources */,
 				EC6B5D9D1C8DB07C00DB81DD /* Qcm.m in Sources */,
+				EC6B5DBD1C8DD43800DB81DD /* DAOAnswerUser.m in Sources */,
 				EC6B5DA31C8DB2AA00DB81DD /* GoodAnswer.m in Sources */,
 				EC6B5D7A1C8DAE6800DB81DD /* ViewController.m in Sources */,
-				EC6B5D801C8DAE6800DB81DD /* QCMapp.xcdatamodeld in Sources */,
+				EC6B5DAE1C8DC17F00DB81DD /* DAOQuestion.m in Sources */,
 				EC6B5DA01C8DB18900DB81DD /* Question.m in Sources */,
+				EC6B5DBA1C8DD33D00DB81DD /* AnswerUser.m in Sources */,
 				EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */,
+				EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */,
+				EC6B5DB41C8DCFE200DB81DD /* BadAnswer.m in Sources */,
+				EC6B5DAB1C8DBCCF00DB81DD /* QcmData.xcdatamodeld in Sources */,
 				EC6B5D741C8DAE6800DB81DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,13 +503,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EC6B5D7E1C8DAE6800DB81DD /* QCMapp.xcdatamodeld */ = {
+		EC6B5DA91C8DBCCF00DB81DD /* QcmData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EC6B5D7F1C8DAE6800DB81DD /* QCMapp.xcdatamodel */,
+				EC6B5DAA1C8DBCCF00DB81DD /* QcmData.xcdatamodel */,
 			);
-			currentVersion = EC6B5D7F1C8DAE6800DB81DD /* QCMapp.xcdatamodel */;
-			path = QCMapp.xcdatamodeld;
+			currentVersion = EC6B5DAA1C8DBCCF00DB81DD /* QcmData.xcdatamodel */;
+			name = QcmData.xcdatamodeld;
+			path = ../dblistiia/dblistiia/data/QcmData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

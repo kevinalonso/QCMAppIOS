@@ -14,7 +14,7 @@
 @property NSString* dateStart;
 @property NSString* dateEnd;
 @property Boolean* isActive;
-@property int idtype;
+//@property int idType;
 
 
 @end

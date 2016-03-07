@@ -1,5 +1,5 @@
 //
-//  DAOQcm.h
+//  AnswerUser.h
 //  QCMapp
 //
 //  Created by etudiant on 07/03/2016.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DAOQcm : NSObject
+@interface AnswerUser : NSObject
+
+@property int sendAnswer;
 
 @end
