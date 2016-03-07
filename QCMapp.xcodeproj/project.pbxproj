@@ -15,6 +15,10 @@
 		EC6B5D821C8DAE6800DB81DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5D811C8DAE6800DB81DD /* Assets.xcassets */; };
 		EC6B5D851C8DAE6800DB81DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5D831C8DAE6800DB81DD /* LaunchScreen.storyboard */; };
 		EC6B5D901C8DAE6800DB81DD /* QCMappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D8F1C8DAE6800DB81DD /* QCMappTests.m */; };
+		EC6B5D9D1C8DB07C00DB81DD /* Qcm.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D9C1C8DB07C00DB81DD /* Qcm.m */; };
+		EC6B5DA01C8DB18900DB81DD /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D9F1C8DB18900DB81DD /* Question.m */; };
+		EC6B5DA31C8DB2AA00DB81DD /* GoodAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DA21C8DB2AA00DB81DD /* GoodAnswer.m */; };
+		EC6B5DA71C8DB33000DB81DD /* DAOQcm.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DA61C8DB33000DB81DD /* DAOQcm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,14 @@
 		EC6B5D8B1C8DAE6800DB81DD /* QCMappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCMappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6B5D8F1C8DAE6800DB81DD /* QCMappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCMappTests.m; sourceTree = "<group>"; };
 		EC6B5D911C8DAE6800DB81DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC6B5D9B1C8DB07C00DB81DD /* Qcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qcm.h; path = entity/Qcm.h; sourceTree = "<group>"; };
+		EC6B5D9C1C8DB07C00DB81DD /* Qcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Qcm.m; path = entity/Qcm.m; sourceTree = "<group>"; };
+		EC6B5D9E1C8DB18900DB81DD /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = entity/Question.h; sourceTree = "<group>"; };
+		EC6B5D9F1C8DB18900DB81DD /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = entity/Question.m; sourceTree = "<group>"; };
+		EC6B5DA11C8DB2AA00DB81DD /* GoodAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoodAnswer.h; path = entity/GoodAnswer.h; sourceTree = "<group>"; };
+		EC6B5DA21C8DB2AA00DB81DD /* GoodAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoodAnswer.m; path = entity/GoodAnswer.m; sourceTree = "<group>"; };
+		EC6B5DA51C8DB33000DB81DD /* DAOQcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOQcm.h; path = crud/DAOQcm.h; sourceTree = "<group>"; };
+		EC6B5DA61C8DB33000DB81DD /* DAOQcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOQcm.m; path = crud/DAOQcm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,7 @@
 		EC6B5D661C8DAE6800DB81DD = {
 			isa = PBXGroup;
 			children = (
+				EC6B5DA41C8DB2FF00DB81DD /* crud */,
 				EC6B5D711C8DAE6800DB81DD /* QCMapp */,
 				EC6B5D8E1C8DAE6800DB81DD /* QCMappTests */,
 				EC6B5D701C8DAE6800DB81DD /* Products */,
@@ -83,6 +96,7 @@
 		EC6B5D711C8DAE6800DB81DD /* QCMapp */ = {
 			isa = PBXGroup;
 			children = (
+				EC6B5D9A1C8DAF9600DB81DD /* entity */,
 				EC6B5D751C8DAE6800DB81DD /* AppDelegate.h */,
 				EC6B5D761C8DAE6800DB81DD /* AppDelegate.m */,
 				EC6B5D781C8DAE6800DB81DD /* ViewController.h */,
@@ -112,6 +126,28 @@
 				EC6B5D911C8DAE6800DB81DD /* Info.plist */,
 			);
 			path = QCMappTests;
+			sourceTree = "<group>";
+		};
+		EC6B5D9A1C8DAF9600DB81DD /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5D9B1C8DB07C00DB81DD /* Qcm.h */,
+				EC6B5D9C1C8DB07C00DB81DD /* Qcm.m */,
+				EC6B5D9E1C8DB18900DB81DD /* Question.h */,
+				EC6B5D9F1C8DB18900DB81DD /* Question.m */,
+				EC6B5DA11C8DB2AA00DB81DD /* GoodAnswer.h */,
+				EC6B5DA21C8DB2AA00DB81DD /* GoodAnswer.m */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		EC6B5DA41C8DB2FF00DB81DD /* crud */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DA51C8DB33000DB81DD /* DAOQcm.h */,
+				EC6B5DA61C8DB33000DB81DD /* DAOQcm.m */,
+			);
+			name = crud;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6B5DA71C8DB33000DB81DD /* DAOQcm.m in Sources */,
+				EC6B5D9D1C8DB07C00DB81DD /* Qcm.m in Sources */,
+				EC6B5DA31C8DB2AA00DB81DD /* GoodAnswer.m in Sources */,
 				EC6B5D7A1C8DAE6800DB81DD /* ViewController.m in Sources */,
 				EC6B5D801C8DAE6800DB81DD /* QCMapp.xcdatamodeld in Sources */,
+				EC6B5DA01C8DB18900DB81DD /* Question.m in Sources */,
 				EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */,
 				EC6B5D741C8DAE6800DB81DD /* main.m in Sources */,
 			);
