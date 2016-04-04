@@ -16,6 +16,13 @@
 @property AppDelegate* appDelegate;
 @property NSManagedObjectContext* context;
 
++(NSString*) ENTITY_QCM;
++(NSString*) NAME_QCM;
++(NSString*) QCM_DATE_START;
++(NSString*) QCM_DATE_END;
++(NSString*) QCM_IS_ACTIVE;
+
+
 - (void)insert:(Qcm *)qcm;
 - (NSArray*)selectAll;
 - (Qcm *)selectById:(NSManagedObject *)qcm;

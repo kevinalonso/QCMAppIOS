@@ -8,10 +8,18 @@
 
 #import "DAOQcm.h"
 #import "AppDelegate.h"
+#import <CoreData/CoreData.h>
 
 @implementation DAOQcm
+
 @synthesize appDelegate;
 @synthesize context;
+
++(NSString*) ENTITY_QCM{ return @"Qcm"; }
++(NSString*) NAME_QCM{ return @"nameQcm"; }
++(NSString*) QCM_DATE_START{ return @"dateStart"; }
++(NSString*) QCM_DATE_END{ return @"dateEnd"; }
++(NSString*) QCM_IS_ACTIVE{ return @"isActive"; }
 
 //Use to insert Qcm in database
 - (void)insert:(Qcm *)qcm{
@@ -19,13 +27,14 @@
     appDelegate = [[UIApplication sharedApplication] delegate];
     context = appDelegate.managedObjectContext;
     
-    NSManagedObject* managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Qcm"
-                                                                   inManagedObjectContext:context];
+    NSManagedObject* managedObject = [NSEntityDescription insertNewObjectForEntityForName:DAOQcm.ENTITY_QCM
+        inManagedObjectContext:context];
+    
     //Set Column in database from entity Qcm
-    [managedObject setValue:qcm.nameQcm forKey:@"nameQcm"];
-    [managedObject setValue:qcm.dateStart forKey:@"dateStart"];
-    [managedObject setValue:qcm.dateEnd forKey:@"dateEnd"];
-    [managedObject setValue:[NSNumber numberWithBool:qcm.isActive]forKey:@"isActive"];
+    [managedObject setValue:qcm.nameQcm forKey:DAOQcm.NAME_QCM];
+    [managedObject setValue:qcm.dateStart forKey:DAOQcm.QCM_DATE_START];
+    [managedObject setValue:qcm.dateEnd forKey:DAOQcm.QCM_DATE_END];
+    [managedObject setValue:[NSNumber numberWithBool:qcm.isActive]forKey:DAOQcm.QCM_IS_ACTIVE];
     //[managedObject setValue:[NSNumber numberWithInt:qcm.idType] forKey:@"idType"];
     
     //Insert in database
@@ -41,7 +50,7 @@
     NSFetchRequest* fetchRequest = [NSFetchRequest new];
     context = appDelegate.managedObjectContext;
     
-    fetchRequest.entity = [NSEntityDescription entityForName:@"Qcm" inManagedObjectContext:context];
+    fetchRequest.entity = [NSEntityDescription entityForName:DAOQcm.ENTITY_QCM inManagedObjectContext:context];
     
     qcms = [context executeFetchRequest:fetchRequest error:nil];
     
@@ -61,13 +70,13 @@
 - (void) update:(NSManagedObject *)managedObject withQcm:(Qcm *)qcm{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext* context = appDelegate.managedObjectContext;
+    context = appDelegate.managedObjectContext;
     
     //Set Column in database from entity Qcm
-    [managedObject setValue:qcm.nameQcm forKey:@"nameQcm"];
-    [managedObject setValue:qcm.dateStart forKey:@"dateStart"];
-    [managedObject setValue:qcm.dateEnd forKey:@"dateEnd"];
-    [managedObject setValue:[NSNumber numberWithBool:qcm.isActive]forKey:@"isActive"];
+    [managedObject setValue:qcm.nameQcm forKey:DAOQcm.NAME_QCM];
+    [managedObject setValue:qcm.dateStart forKey:DAOQcm.QCM_DATE_START];
+    [managedObject setValue:qcm.dateEnd forKey:DAOQcm.QCM_DATE_END];
+    [managedObject setValue:[NSNumber numberWithBool:qcm.isActive]forKey:DAOQcm.QCM_IS_ACTIVE];
     //[managedObject setValue:[NSNumber numberWithInt:qcm.idType] forKey:@"idType"];
     
     [appDelegate saveContext];

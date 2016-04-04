@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC4D6E171C8F1EE900CEE909 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4D6E161C8F1EE900CEE909 /* WelcomeViewController.m */; };
 		EC6B5D741C8DAE6800DB81DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D731C8DAE6800DB81DD /* main.m */; };
 		EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D761C8DAE6800DB81DD /* AppDelegate.m */; };
 		EC6B5D7A1C8DAE6800DB81DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D791C8DAE6800DB81DD /* ViewController.m */; };
@@ -25,6 +26,25 @@
 		EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DB61C8DD07900DB81DD /* DAOBadAnswer.m */; };
 		EC6B5DBA1C8DD33D00DB81DD /* AnswerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */; };
 		EC6B5DBD1C8DD43800DB81DD /* DAOAnswerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DBC1C8DD43800DB81DD /* DAOAnswerUser.m */; };
+		EC6B5DC01C8EC05000DB81DD /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC6B5DBF1C8EC05000DB81DD /* File.strings */; };
+		EC6B5DD51C8EC49D00DB81DD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DC91C8EC49D00DB81DD /* AFHTTPSessionManager.m */; };
+		EC6B5DD61C8EC49D00DB81DD /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DCC1C8EC49D00DB81DD /* AFNetworkReachabilityManager.m */; };
+		EC6B5DD71C8EC49D00DB81DD /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DCE1C8EC49D00DB81DD /* AFSecurityPolicy.m */; };
+		EC6B5DD81C8EC49D00DB81DD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DD01C8EC49D00DB81DD /* AFURLRequestSerialization.m */; };
+		EC6B5DD91C8EC49D00DB81DD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DD21C8EC49D00DB81DD /* AFURLResponseSerialization.m */; };
+		EC6B5DDA1C8EC49D00DB81DD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DD41C8EC49D00DB81DD /* AFURLSessionManager.m */; };
+		EC6B5DF01C8EC4D400DB81DD /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DDD1C8EC4D400DB81DD /* AFAutoPurgingImageCache.m */; };
+		EC6B5DF11C8EC4D400DB81DD /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DDF1C8EC4D400DB81DD /* AFImageDownloader.m */; };
+		EC6B5DF21C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DE11C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m */; };
+		EC6B5DF31C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DE31C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.m */; };
+		EC6B5DF41C8EC4D400DB81DD /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DE51C8EC4D400DB81DD /* UIButton+AFNetworking.m */; };
+		EC6B5DF51C8EC4D400DB81DD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DE81C8EC4D400DB81DD /* UIImageView+AFNetworking.m */; };
+		EC6B5DF61C8EC4D400DB81DD /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DEB1C8EC4D400DB81DD /* UIProgressView+AFNetworking.m */; };
+		EC6B5DF71C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DED1C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m */; };
+		EC6B5DF81C8EC4D400DB81DD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DEF1C8EC4D400DB81DD /* UIWebView+AFNetworking.m */; };
+		EC6B5DFC1C8EC93600DB81DD /* weatherWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DFB1C8EC93600DB81DD /* weatherWebServiceAdapter.m */; };
+		EC6B5DFF1C8ECACC00DB81DD /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DFE1C8ECACC00DB81DD /* Weather.m */; };
+		EC6B5E021C8F024400DB81DD /* QcmWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC4D6E151C8F1EE900CEE909 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = welcomeController/WelcomeViewController.h; sourceTree = "<group>"; };
+		EC4D6E161C8F1EE900CEE909 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = welcomeController/WelcomeViewController.m; sourceTree = "<group>"; };
 		EC6B5D6F1C8DAE6800DB81DD /* QCMapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCMapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6B5D731C8DAE6800DB81DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC6B5D751C8DAE6800DB81DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +94,46 @@
 		EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerUser.m; sourceTree = "<group>"; };
 		EC6B5DBB1C8DD43800DB81DD /* DAOAnswerUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOAnswerUser.h; sourceTree = "<group>"; };
 		EC6B5DBC1C8DD43800DB81DD /* DAOAnswerUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOAnswerUser.m; sourceTree = "<group>"; };
+		EC6B5DBF1C8EC05000DB81DD /* File.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
+		EC6B5DC81C8EC49D00DB81DD /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFHTTPSessionManager.h"; sourceTree = "<group>"; };
+		EC6B5DC91C8EC49D00DB81DD /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFHTTPSessionManager.m"; sourceTree = "<group>"; };
+		EC6B5DCA1C8EC49D00DB81DD /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DCB1C8EC49D00DB81DD /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFNetworkReachabilityManager.h"; sourceTree = "<group>"; };
+		EC6B5DCC1C8EC49D00DB81DD /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFNetworkReachabilityManager.m"; sourceTree = "<group>"; };
+		EC6B5DCD1C8EC49D00DB81DD /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFSecurityPolicy.h"; sourceTree = "<group>"; };
+		EC6B5DCE1C8EC49D00DB81DD /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFSecurityPolicy.m"; sourceTree = "<group>"; };
+		EC6B5DCF1C8EC49D00DB81DD /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFURLRequestSerialization.h"; sourceTree = "<group>"; };
+		EC6B5DD01C8EC49D00DB81DD /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFURLRequestSerialization.m"; sourceTree = "<group>"; };
+		EC6B5DD11C8EC49D00DB81DD /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFURLResponseSerialization.h"; sourceTree = "<group>"; };
+		EC6B5DD21C8EC49D00DB81DD /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFURLResponseSerialization.m"; sourceTree = "<group>"; };
+		EC6B5DD31C8EC49D00DB81DD /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFURLSessionManager.h"; sourceTree = "<group>"; };
+		EC6B5DD41C8EC49D00DB81DD /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = "../../../Downloads/AFNetworking-master/AFNetworking/AFURLSessionManager.m"; sourceTree = "<group>"; };
+		EC6B5DDC1C8EC4D400DB81DD /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
+		EC6B5DDD1C8EC4D400DB81DD /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
+		EC6B5DDE1C8EC4D400DB81DD /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
+		EC6B5DDF1C8EC4D400DB81DD /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		EC6B5DE01C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		EC6B5DE11C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		EC6B5DE21C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DE31C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		EC6B5DE41C8EC4D400DB81DD /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DE51C8EC4D400DB81DD /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		EC6B5DE61C8EC4D400DB81DD /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DE71C8EC4D400DB81DD /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DE81C8EC4D400DB81DD /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		EC6B5DE91C8EC4D400DB81DD /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DEA1C8EC4D400DB81DD /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DEB1C8EC4D400DB81DD /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		EC6B5DEC1C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DED1C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		EC6B5DEE1C8EC4D400DB81DD /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		EC6B5DEF1C8EC4D400DB81DD /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "../../../Downloads/AFNetworking-master/UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		EC6B5DFA1C8EC93600DB81DD /* weatherWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = weatherWebServiceAdapter.h; path = webservice/weatherWebServiceAdapter.h; sourceTree = "<group>"; };
+		EC6B5DFB1C8EC93600DB81DD /* weatherWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = weatherWebServiceAdapter.m; path = webservice/weatherWebServiceAdapter.m; sourceTree = "<group>"; };
+		EC6B5DFD1C8ECACC00DB81DD /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		EC6B5DFE1C8ECACC00DB81DD /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		EC6B5E001C8F024400DB81DD /* QcmWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QcmWebServiceAdapter.h; sourceTree = "<group>"; };
+		EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QcmWebServiceAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC4D6E141C8F1EAE00CEE909 /* welcomeController */ = {
+			isa = PBXGroup;
+			children = (
+				EC4D6E151C8F1EE900CEE909 /* WelcomeViewController.h */,
+				EC4D6E161C8F1EE900CEE909 /* WelcomeViewController.m */,
+			);
+			name = welcomeController;
+			sourceTree = "<group>";
+		};
 		EC6B5D661C8DAE6800DB81DD = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +184,10 @@
 		EC6B5D711C8DAE6800DB81DD /* QCMapp */ = {
 			isa = PBXGroup;
 			children = (
+				EC4D6E141C8F1EAE00CEE909 /* welcomeController */,
+				EC6B5DF91C8EC8DD00DB81DD /* webservice */,
+				EC6B5DC21C8EC2D700DB81DD /* libs */,
+				EC6B5DBE1C8EC03300DB81DD /* info */,
 				EC6B5D9A1C8DAF9600DB81DD /* entity */,
 				EC6B5DA81C8DBC9C00DB81DD /* data */,
 				EC6B5DA41C8DB2FF00DB81DD /* crud */,
@@ -159,6 +234,8 @@
 				EC6B5DB31C8DCFE200DB81DD /* BadAnswer.m */,
 				EC6B5DB81C8DD33D00DB81DD /* AnswerUser.h */,
 				EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */,
+				EC6B5DFD1C8ECACC00DB81DD /* Weather.h */,
+				EC6B5DFE1C8ECACC00DB81DD /* Weather.m */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -187,6 +264,81 @@
 			);
 			name = data;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		EC6B5DBE1C8EC03300DB81DD /* info */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DBF1C8EC05000DB81DD /* File.strings */,
+			);
+			name = info;
+			sourceTree = "<group>";
+		};
+		EC6B5DC21C8EC2D700DB81DD /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DDB1C8EC4A500DB81DD /* UIKit+AFNetworking */,
+				EC6B5DC71C8EC47D00DB81DD /* AFNetworking */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		EC6B5DC71C8EC47D00DB81DD /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DC81C8EC49D00DB81DD /* AFHTTPSessionManager.h */,
+				EC6B5DC91C8EC49D00DB81DD /* AFHTTPSessionManager.m */,
+				EC6B5DCA1C8EC49D00DB81DD /* AFNetworking.h */,
+				EC6B5DCB1C8EC49D00DB81DD /* AFNetworkReachabilityManager.h */,
+				EC6B5DCC1C8EC49D00DB81DD /* AFNetworkReachabilityManager.m */,
+				EC6B5DCD1C8EC49D00DB81DD /* AFSecurityPolicy.h */,
+				EC6B5DCE1C8EC49D00DB81DD /* AFSecurityPolicy.m */,
+				EC6B5DCF1C8EC49D00DB81DD /* AFURLRequestSerialization.h */,
+				EC6B5DD01C8EC49D00DB81DD /* AFURLRequestSerialization.m */,
+				EC6B5DD11C8EC49D00DB81DD /* AFURLResponseSerialization.h */,
+				EC6B5DD21C8EC49D00DB81DD /* AFURLResponseSerialization.m */,
+				EC6B5DD31C8EC49D00DB81DD /* AFURLSessionManager.h */,
+				EC6B5DD41C8EC49D00DB81DD /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		EC6B5DDB1C8EC4A500DB81DD /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DDC1C8EC4D400DB81DD /* AFAutoPurgingImageCache.h */,
+				EC6B5DDD1C8EC4D400DB81DD /* AFAutoPurgingImageCache.m */,
+				EC6B5DDE1C8EC4D400DB81DD /* AFImageDownloader.h */,
+				EC6B5DDF1C8EC4D400DB81DD /* AFImageDownloader.m */,
+				EC6B5DE01C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.h */,
+				EC6B5DE11C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m */,
+				EC6B5DE21C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.h */,
+				EC6B5DE31C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.m */,
+				EC6B5DE41C8EC4D400DB81DD /* UIButton+AFNetworking.h */,
+				EC6B5DE51C8EC4D400DB81DD /* UIButton+AFNetworking.m */,
+				EC6B5DE61C8EC4D400DB81DD /* UIImage+AFNetworking.h */,
+				EC6B5DE71C8EC4D400DB81DD /* UIImageView+AFNetworking.h */,
+				EC6B5DE81C8EC4D400DB81DD /* UIImageView+AFNetworking.m */,
+				EC6B5DE91C8EC4D400DB81DD /* UIKit+AFNetworking.h */,
+				EC6B5DEA1C8EC4D400DB81DD /* UIProgressView+AFNetworking.h */,
+				EC6B5DEB1C8EC4D400DB81DD /* UIProgressView+AFNetworking.m */,
+				EC6B5DEC1C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.h */,
+				EC6B5DED1C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m */,
+				EC6B5DEE1C8EC4D400DB81DD /* UIWebView+AFNetworking.h */,
+				EC6B5DEF1C8EC4D400DB81DD /* UIWebView+AFNetworking.m */,
+			);
+			name = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		EC6B5DF91C8EC8DD00DB81DD /* webservice */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B5DFA1C8EC93600DB81DD /* weatherWebServiceAdapter.h */,
+				EC6B5DFB1C8EC93600DB81DD /* weatherWebServiceAdapter.m */,
+				EC6B5E001C8F024400DB81DD /* QcmWebServiceAdapter.h */,
+				EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */,
+			);
+			name = webservice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6B5DC01C8EC05000DB81DD /* File.strings in Resources */,
 				EC6B5D851C8DAE6800DB81DD /* LaunchScreen.storyboard in Resources */,
 				EC6B5D821C8DAE6800DB81DD /* Assets.xcassets in Resources */,
 				EC6B5D7D1C8DAE6800DB81DD /* Main.storyboard in Resources */,
@@ -290,19 +443,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6B5DB11C8DC4EE00DB81DD /* DAOGoodAnswer.m in Sources */,
+				EC6B5DF51C8EC4D400DB81DD /* UIImageView+AFNetworking.m in Sources */,
+				EC6B5E021C8F024400DB81DD /* QcmWebServiceAdapter.m in Sources */,
+				EC6B5DF41C8EC4D400DB81DD /* UIButton+AFNetworking.m in Sources */,
+				EC6B5DFC1C8EC93600DB81DD /* weatherWebServiceAdapter.m in Sources */,
 				EC6B5DA71C8DB33000DB81DD /* DAOQcm.m in Sources */,
 				EC6B5D9D1C8DB07C00DB81DD /* Qcm.m in Sources */,
 				EC6B5DBD1C8DD43800DB81DD /* DAOAnswerUser.m in Sources */,
 				EC6B5DA31C8DB2AA00DB81DD /* GoodAnswer.m in Sources */,
+				EC6B5DDA1C8EC49D00DB81DD /* AFURLSessionManager.m in Sources */,
+				EC6B5DF31C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				EC6B5D7A1C8DAE6800DB81DD /* ViewController.m in Sources */,
+				EC6B5DD61C8EC49D00DB81DD /* AFNetworkReachabilityManager.m in Sources */,
 				EC6B5DAE1C8DC17F00DB81DD /* DAOQuestion.m in Sources */,
 				EC6B5DA01C8DB18900DB81DD /* Question.m in Sources */,
+				EC6B5DD91C8EC49D00DB81DD /* AFURLResponseSerialization.m in Sources */,
+				EC6B5DD81C8EC49D00DB81DD /* AFURLRequestSerialization.m in Sources */,
+				EC4D6E171C8F1EE900CEE909 /* WelcomeViewController.m in Sources */,
+				EC6B5DF21C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m in Sources */,
+				EC6B5DF01C8EC4D400DB81DD /* AFAutoPurgingImageCache.m in Sources */,
+				EC6B5DD71C8EC49D00DB81DD /* AFSecurityPolicy.m in Sources */,
 				EC6B5DBA1C8DD33D00DB81DD /* AnswerUser.m in Sources */,
 				EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */,
 				EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */,
 				EC6B5DB41C8DCFE200DB81DD /* BadAnswer.m in Sources */,
+				EC6B5DF71C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m in Sources */,
+				EC6B5DF61C8EC4D400DB81DD /* UIProgressView+AFNetworking.m in Sources */,
+				EC6B5DD51C8EC49D00DB81DD /* AFHTTPSessionManager.m in Sources */,
+				EC6B5DFF1C8ECACC00DB81DD /* Weather.m in Sources */,
+				EC6B5DF81C8EC4D400DB81DD /* UIWebView+AFNetworking.m in Sources */,
 				EC6B5DAB1C8DBCCF00DB81DD /* QcmData.xcdatamodeld in Sources */,
 				EC6B5D741C8DAE6800DB81DD /* main.m in Sources */,
+				EC6B5DF11C8EC4D400DB81DD /* AFImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +663,7 @@
 				EC6B5D961C8DAE6800DB81DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC6B5D971C8DAE6800DB81DD /* Build configuration list for PBXNativeTarget "QCMappTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +672,7 @@
 				EC6B5D991C8DAE6800DB81DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

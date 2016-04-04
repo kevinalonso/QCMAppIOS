@@ -13,7 +13,7 @@
 @property NSString* nameQcm;
 @property NSString* dateStart;
 @property NSString* dateEnd;
-@property Boolean* isActive;
+@property bool isActive;
 //@property int idType;
 
 

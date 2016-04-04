@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "weatherWebServiceAdapter.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    
+    void( ^callback)(Weather*) = ^(Weather* weather){
+        NSLog(weather.description);
+    };
+    
+    weatherWebServiceAdapter* adapter = [weatherWebServiceAdapter new];
+    [adapter getWeather:callback];
+    
+    //Similaire à la méthode du deçus
+    /*weatherWebServiceAdapter* adapter = [weatherWebServiceAdapter new];
+    [adapter getWeather:^(Weather *weather){
+        NSLog(weather.description);
+    }];*/
+    
     return YES;
 }
 
@@ -60,7 +76,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"QCMapp" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"QcmData" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -74,7 +90,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"QCMapp.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"QcmData.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

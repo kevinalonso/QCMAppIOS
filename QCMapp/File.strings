@@ -1,0 +1,14 @@
+/* 
+  File.strings
+  QCMapp
+
+  Created by etudiant on 08/03/2016.
+  Copyright © 2016 etudiant. All rights reserved.
+*/
+
+//Utiliser AFnetworking pour le web service:
+//https://github.com/AFNetworking/AFNetworking
+//download zip
+
+//Pas de AsyncTasck il faut utiliser des thread*/
+
