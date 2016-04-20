@@ -15,13 +15,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3Sf-en-gne">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3Sf-en-gne">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Sf-en-gne" id="Q6o-yq-pKP">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PSx-sJ-sWu" kind="show" id="mOP-CT-hot"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,6 +36,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO2-LI-Ain" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="312" y="-404"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="tgN-Se-E9h">
+            <objects>
+                <viewController id="PSx-sJ-sWu" customClass="QuestionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Efy-H8-hBW"/>
+                        <viewControllerLayoutGuide type="bottom" id="4hk-hq-ck9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FXC-6a-Kfz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5E-Ap-0Fs">
+                                <rect key="frame" x="20" y="41" width="580" height="89"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yu-Gj-eqW">
+                                <rect key="frame" x="4" y="550" width="39" height="30"/>
+                                <state key="normal" title="PREC"/>
+                                <connections>
+                                    <action selector="prev:" destination="PSx-sJ-sWu" eventType="touchUpInside" id="YiJ-XK-GOV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9j-Qx-72i">
+                                <rect key="frame" x="560" y="550" width="34" height="30"/>
+                                <state key="normal" title="SUIV"/>
+                                <connections>
+                                    <action selector="next:" destination="PSx-sJ-sWu" eventType="touchUpInside" id="2sQ-Ny-D9h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4yu-Gj-eqW" secondAttribute="bottom" constant="20" symbolic="YES" id="9c0-A0-oOt"/>
+                            <constraint firstItem="4yu-Gj-eqW" firstAttribute="leading" secondItem="FXC-6a-Kfz" secondAttribute="leadingMargin" constant="-16" id="VYv-wv-Zz5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G9j-Qx-72i" secondAttribute="trailing" constant="-14" id="Xb1-Jl-MQw"/>
+                            <constraint firstItem="4yu-Gj-eqW" firstAttribute="baseline" secondItem="G9j-Qx-72i" secondAttribute="baseline" id="ymC-kq-YgL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textQuestion" destination="h5E-Ap-0Fs" id="8Vz-y0-CJB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7W-EO-xF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="-404"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

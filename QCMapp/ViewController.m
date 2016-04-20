@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 #import "QcmWebServiceAdapter.h"
+#import "QuestionWebServiceAdapter.h"
 #import "DAOQcm.h"
+#import "DAOQuestion.h"
 
 @interface ViewController ()
 
@@ -46,24 +48,69 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+/***********************************************QCM**************************/
     void( ^callback)(NSArray*) = ^(NSArray* qcms){
-        //Qcm* qcm =[qcms objectAtIndex:0];
         DAOQcm* daoQcm = [DAOQcm new];
         NSArray* checkQcm = [daoQcm selectAll];
+        int i = 0;
+        
+        NSLog(@"Size of NSArray checkQcm = %lu",[checkQcm count]);
         
         for (Qcm* item in qcms) {
-            for (Qcm* itemSelect in checkQcm) {
-                if([itemSelect.nameQcm isEqualToString:item.nameQcm]){
-                    NSLog(@"Exist in database %@",itemSelect.nameQcm);
-                }else{
+            Qcm* getQcm;
+            if([checkQcm count] != 0){
+                 getQcm = [checkQcm objectAtIndex:i];
+                if([item.nameQcm isEqualToString:getQcm.nameQcm]){
+                    NSLog(@"Exist in database %@",item.nameQcm);
+                    i++;
+                } else {
                     [daoQcm insert:item];
+                    i++;
                 }
+            }
+            if([checkQcm count] == 0)
+            {
+                [daoQcm insert:item];
+                
             }
         }
     };
     
     QcmWebServiceAdapter* services = [QcmWebServiceAdapter new];
     [services getAllQcm:callback];
+    /***************************************************************************/
+    
+    /*************************************QUESTION******************************/
+    void( ^callbackQuestion)(NSArray*) = ^(NSArray* questions){
+        DAOQuestion* daoQuestion = [DAOQuestion new];
+        NSArray* checkQuestion = [daoQuestion selectAll];
+        int j = 0;
+        
+        NSLog(@"Size of NSArray checkQcm = %lu",[checkQuestion count]);
+        
+        for (Question* itemQuestion in questions) {
+            Question* getQuestion;
+            if([checkQuestion count] != 0){
+                getQuestion = [checkQuestion objectAtIndex:j];
+                if([itemQuestion.textQuestion isEqualToString:getQuestion.textQuestion]){
+                    NSLog(@"Exist in database %@",itemQuestion.textQuestion);
+                    j++;
+                } else {
+                    [daoQuestion insert:itemQuestion];
+                    j++;
+                }
+            }
+            if([checkQuestion count] == 0)
+            {
+                [daoQuestion insert:itemQuestion];
+                
+            }
+        }
+    };
+    
+    QuestionWebServiceAdapter* questionService = [QuestionWebServiceAdapter new];
+    [questionService getAllQuestion:callbackQuestion];
+    /*********************************************************************************/
 }
 
 @end

@@ -45,6 +45,8 @@
 		EC6B5DFC1C8EC93600DB81DD /* weatherWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DFB1C8EC93600DB81DD /* weatherWebServiceAdapter.m */; };
 		EC6B5DFF1C8ECACC00DB81DD /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DFE1C8ECACC00DB81DD /* Weather.m */; };
 		EC6B5E021C8F024400DB81DD /* QcmWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */; };
+		ECC7727E1CC62828001D6C23 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7727D1CC62828001D6C23 /* QuestionViewController.m */; };
+		ECC772841CC68944001D6C23 /* QuestionWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,10 @@
 		EC6B5DFE1C8ECACC00DB81DD /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		EC6B5E001C8F024400DB81DD /* QcmWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QcmWebServiceAdapter.h; sourceTree = "<group>"; };
 		EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QcmWebServiceAdapter.m; sourceTree = "<group>"; };
+		ECC7727C1CC62828001D6C23 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		ECC7727D1CC62828001D6C23 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		ECC772821CC68944001D6C23 /* QuestionWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionWebServiceAdapter.h; sourceTree = "<group>"; };
+		ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionWebServiceAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,7 @@
 		EC6B5D711C8DAE6800DB81DD /* QCMapp */ = {
 			isa = PBXGroup;
 			children = (
+				ECC7727B1CC62755001D6C23 /* questionController */,
 				EC4D6E141C8F1EAE00CEE909 /* welcomeController */,
 				EC6B5DF91C8EC8DD00DB81DD /* webservice */,
 				EC6B5DC21C8EC2D700DB81DD /* libs */,
@@ -337,8 +344,19 @@
 				EC6B5DFB1C8EC93600DB81DD /* weatherWebServiceAdapter.m */,
 				EC6B5E001C8F024400DB81DD /* QcmWebServiceAdapter.h */,
 				EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */,
+				ECC772821CC68944001D6C23 /* QuestionWebServiceAdapter.h */,
+				ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */,
 			);
 			name = webservice;
+			sourceTree = "<group>";
+		};
+		ECC7727B1CC62755001D6C23 /* questionController */ = {
+			isa = PBXGroup;
+			children = (
+				ECC7727C1CC62828001D6C23 /* QuestionViewController.h */,
+				ECC7727D1CC62828001D6C23 /* QuestionViewController.m */,
+			);
+			name = questionController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +477,7 @@
 				EC6B5DA01C8DB18900DB81DD /* Question.m in Sources */,
 				EC6B5DD91C8EC49D00DB81DD /* AFURLResponseSerialization.m in Sources */,
 				EC6B5DD81C8EC49D00DB81DD /* AFURLRequestSerialization.m in Sources */,
+				ECC772841CC68944001D6C23 /* QuestionWebServiceAdapter.m in Sources */,
 				EC4D6E171C8F1EE900CEE909 /* WelcomeViewController.m in Sources */,
 				EC6B5DF21C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EC6B5DF01C8EC4D400DB81DD /* AFAutoPurgingImageCache.m in Sources */,
@@ -468,6 +487,7 @@
 				EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */,
 				EC6B5DB41C8DCFE200DB81DD /* BadAnswer.m in Sources */,
 				EC6B5DF71C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m in Sources */,
+				ECC7727E1CC62828001D6C23 /* QuestionViewController.m in Sources */,
 				EC6B5DF61C8EC4D400DB81DD /* UIProgressView+AFNetworking.m in Sources */,
 				EC6B5DD51C8EC49D00DB81DD /* AFHTTPSessionManager.m in Sources */,
 				EC6B5DFF1C8ECACC00DB81DD /* Weather.m in Sources */,

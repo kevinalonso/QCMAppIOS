@@ -7,6 +7,7 @@
 //
 
 #import "DAOQuestion.h"
+#import "Qcm.h"
 
 @implementation DAOQuestion
 @synthesize appDelegate;
@@ -19,9 +20,12 @@
     context = appDelegate.managedObjectContext;
     
     NSManagedObject* managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Question"
-                                                                   inManagedObjectContext:context];
-    //Set Column in database from entity Qcm
+        inManagedObjectContext:context];
+    
+    //Set Column in database from entity Question
     [managedObject setValue:question.textQuestion forKey:@"textQuestion"];
+    //int idQcmFk = [question.idQcm intValue];
+    [managedObject setValue:question.idQcm forKey:@"qcmId"];
     
     //Insert in database
     [appDelegate saveContext];
@@ -42,6 +46,23 @@
 
 }
 
+-(NSArray*)slectIdQcmFk:(Qcm*) qcm{
+    
+    appDelegate = [[UIApplication sharedApplication]delegate];
+    context = appDelegate.managedObjectContext;
+    NSFetchRequest* fetchRequest = [NSFetchRequest new];
+    fetchRequest.entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+    // You speak about you use Id, but is word reserved better use resourceId or something like that
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qcmId=1"];
+    [fetchRequest setPredicate:predicate];
+    NSArray *result = [context executeFetchRequest:fetchRequest error:nil];
+    //NSManagedObject *father_Id1 = [result firstObject];
+    //NSSet *sons = [father_Id1 valueForKey:@"qcmrelationship"];
+    
+    return result;
+    
+}
+
 - (Question *)selectById:(NSManagedObject *)question{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
@@ -56,7 +77,7 @@
     appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* context = appDelegate.managedObjectContext;
     
-    //Set Column in database from entity Qcm
+    //Set Column in database from entity Question
     [managedObject setValue:question.textQuestion forKey:@"textQuestion"];
     
     [appDelegate saveContext];

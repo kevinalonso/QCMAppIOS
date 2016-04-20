@@ -12,6 +12,6 @@
 
 @property NSString* textQuestion;
 //@property long idType;
-//@property long idQcm;
+@property NSString* idQcm;
 
 @end

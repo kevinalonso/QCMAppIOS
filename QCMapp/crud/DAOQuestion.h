@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "Question.h"
 #import "AppDelegate.h"
+#import "Qcm.h"
 
 @interface DAOQuestion : NSObject
 
@@ -18,6 +19,7 @@
 
 - (void)insert:(Question *)question;
 - (NSArray*)selectAll;
+- (NSArray*)slectIdQcmFk:(Qcm*) qcm;
 - (Question *)selectById:(NSManagedObject *)question;
 - (void) update:(NSManagedObject *)managedObject withQuestion:(Question *)question;
 - (void)remove:(NSManagedObject *)managedObject;

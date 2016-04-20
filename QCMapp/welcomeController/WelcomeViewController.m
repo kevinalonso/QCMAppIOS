@@ -9,6 +9,8 @@
 #import "WelcomeViewController.h"
 #import "QcmWebServiceAdapter.h"
 #import "DAOQcm.h"
+#import "DAOQuestion.h"
+#import "QuestionViewController.h"
 
 @interface WelcomeViewController ()
 {
@@ -24,18 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     appDelegate = [[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context = appDelegate.managedObjectContext;
     
     DAOQcm* daoQcm = [DAOQcm new];
     self.resQcm = [daoQcm selectAll];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,7 +64,7 @@
     
     //Add elment in the field list
     cell.textLabel.text = [[self.resQcm objectAtIndex:indexPath.row]nameQcm];
-    
+     
     return cell;
 }
 
@@ -112,19 +107,18 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     
-    //Call web service
-    /*void( ^callback)(Qcm*) = ^(Qcm* qcm){
-        
-        DAOQcm* daoQcm = [DAOQcm new];
-        [daoQcm insert:qcm];
-    };
+    QuestionViewController* questionViewController = segue.destinationViewController;
+    self->qcmClick = [self.resQcm objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     
-    QcmWebServiceAdapter* qcmWebService = [QcmWebServiceAdapter new];
-    [qcmWebService getAllQcm:callback];*/
+    DAOQuestion *daoQuestion = [DAOQuestion new];
+    NSArray* res = [daoQuestion slectIdQcmFk:qcmClick];
     
+    questionViewController.resultQuestionFromQcm = res;
+    
+    //questionViewController.qcm = self->cityClick;
+    
+    //questionViewController.qcm = self->qcmClick;
 }
 
 @end
