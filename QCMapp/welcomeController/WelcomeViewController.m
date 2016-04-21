@@ -109,16 +109,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     QuestionViewController* questionViewController = segue.destinationViewController;
+    
+    NSManagedObject* idSelected = [self.resQcm objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    
+    
     self->qcmClick = [self.resQcm objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     
     DAOQuestion *daoQuestion = [DAOQuestion new];
-    NSArray* res = [daoQuestion slectIdQcmFk:qcmClick];
+    NSArray* res = [daoQuestion slectIdQcmFk:qcmClick :idSelected];
     
     questionViewController.resultQuestionFromQcm = res;
-    
-    //questionViewController.qcm = self->cityClick;
-    
-    //questionViewController.qcm = self->qcmClick;
+
 }
 
 @end

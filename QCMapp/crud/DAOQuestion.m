@@ -8,6 +8,7 @@
 
 #import "DAOQuestion.h"
 #import "Qcm.h"
+#import "DAOQcm.h"
 
 @implementation DAOQuestion
 @synthesize appDelegate;
@@ -46,18 +47,23 @@
 
 }
 
--(NSArray*)slectIdQcmFk:(Qcm*) qcm{
+-(NSArray*)slectIdQcmFk:(Qcm*) qcm:(NSManagedObject*)idQcm{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
     context = appDelegate.managedObjectContext;
     NSFetchRequest* fetchRequest = [NSFetchRequest new];
     fetchRequest.entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
-    // You speak about you use Id, but is word reserved better use resourceId or something like that
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qcmId=1"];
+    
+    /*NSFetchRequest* requestId = [NSFetchRequest new];
+    [requestId setEntity:[NSEntityDescription entityForName:DAOQcm.ENTITY_QCM inManagedObjectContext:context]];
+    [requestId setResultType:NSManagedObjectIDResultType];
+    NSArray* resID = [NSArray new];
+    resID = [context executeFetchRequest:requestId error:nil];*/
+    
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qcmId=%@",idQcm];
     [fetchRequest setPredicate:predicate];
     NSArray *result = [context executeFetchRequest:fetchRequest error:nil];
-    //NSManagedObject *father_Id1 = [result firstObject];
-    //NSSet *sons = [father_Id1 valueForKey:@"qcmrelationship"];
     
     return result;
     

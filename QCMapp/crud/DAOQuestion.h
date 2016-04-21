@@ -17,9 +17,11 @@
 @property AppDelegate* appDelegate;
 @property NSManagedObjectContext* context;
 
+@property NSManagedObject* object;
+
 - (void)insert:(Question *)question;
 - (NSArray*)selectAll;
-- (NSArray*)slectIdQcmFk:(Qcm*) qcm;
+- (NSArray*)slectIdQcmFk:(Qcm*) qcm:(NSManagedObject*)idQcm;
 - (Question *)selectById:(NSManagedObject *)question;
 - (void) update:(NSManagedObject *)managedObject withQuestion:(Question *)question;
 - (void)remove:(NSManagedObject *)managedObject;

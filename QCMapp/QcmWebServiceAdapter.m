@@ -15,6 +15,7 @@
 @synthesize manager;
 
 +(NSString*) JSON_QCM_NAME{ return @"nameQcm"; }
++(NSString*) JSON_QCM_ID{return @"id";}
 +(NSString*) JSON_QCM_DATE_START{ return @"dateStart"; }
 +(NSString*) JSON_QCM_DATE_END{ return @"dateEnd"; }
 +(NSString*) JSON_QCM_IS_ACTIVE{ return @"isActive"; }
@@ -141,6 +142,7 @@
     NSDictionary* result = nil;
     if(qcm != nil){
         result = [NSDictionary dictionaryWithObjectsAndKeys:
+                  qcm.idQcm, QcmWebServiceAdapter.JSON_QCM_ID,
                   qcm.nameQcm, QcmWebServiceAdapter.JSON_QCM_NAME,
                   qcm.dateStart, QcmWebServiceAdapter.JSON_QCM_DATE_START,
                   qcm.dateEnd, QcmWebServiceAdapter.JSON_QCM_DATE_END,

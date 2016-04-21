@@ -18,9 +18,11 @@
     context = appDelegate.managedObjectContext;
     
     NSManagedObject* managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"BadAnswer"
-                                                                   inManagedObjectContext:context];
-    //Set Column in database from entity Qcm
+        inManagedObjectContext:context];
+    
+    //Set Column in database from entity BadAnswer
     [managedObject setValue:badAnswer.badAnswerQuestion forKey:@"badAnswerQuestion"];
+    [managedObject setValue:badAnswer.idQuestion forKey:@"questionId"];
     
     //Insert in database
     [appDelegate saveContext];
@@ -28,17 +30,32 @@
 
 - (NSArray*)selectAll{
     
-    NSArray* goodAnswers = [NSArray new];
+    NSArray* badAnswers = [NSArray new];
     appDelegate = [[UIApplication sharedApplication] delegate];
     NSFetchRequest* fetchRequest = [NSFetchRequest new];
     context = appDelegate.managedObjectContext;
     
-    fetchRequest.entity = [NSEntityDescription entityForName:@"GoodAnswer"
+    fetchRequest.entity = [NSEntityDescription entityForName:@"BadAnswer"
                                       inManagedObjectContext:context];
     
-    goodAnswers = [context executeFetchRequest:fetchRequest error:nil];
+    badAnswers = [context executeFetchRequest:fetchRequest error:nil];
     
-    return goodAnswers;
+    return badAnswers;
+}
+
+-(NSArray*)slectIdQuestionFk:(BadAnswer*) badAnswer:(NSManagedObject*)idQuestion{
+    
+    appDelegate = [[UIApplication sharedApplication]delegate];
+    context = appDelegate.managedObjectContext;
+    NSFetchRequest* fetchRequest = [NSFetchRequest new];
+    fetchRequest.entity = [NSEntityDescription entityForName:@"BadAnswer" inManagedObjectContext:context];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"questionId=%@",idQuestion];
+    [fetchRequest setPredicate:predicate];
+    NSArray *result = [context executeFetchRequest:fetchRequest error:nil];
+    
+    return result;
+    
 }
 
 - (BadAnswer *)selectById:(NSManagedObject *)badAnswer{

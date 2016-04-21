@@ -47,6 +47,10 @@
 		EC6B5E021C8F024400DB81DD /* QcmWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */; };
 		ECC7727E1CC62828001D6C23 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7727D1CC62828001D6C23 /* QuestionViewController.m */; };
 		ECC772841CC68944001D6C23 /* QuestionWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */; };
+		ECC772871CC8C6F2001D6C23 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC772861CC8C6F2001D6C23 /* check.png */; };
+		ECC7728A1CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772891CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m */; };
+		ECC7728D1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */; };
+		ECC772911CC96FCD001D6C23 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772901CC96FCD001D6C23 /* Constant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +144,13 @@
 		ECC7727D1CC62828001D6C23 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		ECC772821CC68944001D6C23 /* QuestionWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionWebServiceAdapter.h; sourceTree = "<group>"; };
 		ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionWebServiceAdapter.m; sourceTree = "<group>"; };
+		ECC772861CC8C6F2001D6C23 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		ECC772881CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodAnswerWebServiceAdapter.h; sourceTree = "<group>"; };
+		ECC772891CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodAnswerWebServiceAdapter.m; sourceTree = "<group>"; };
+		ECC7728B1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadAnswerWebServiceAdapter.h; sourceTree = "<group>"; };
+		ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadAnswerWebServiceAdapter.m; sourceTree = "<group>"; };
+		ECC7728F1CC96FCD001D6C23 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		ECC772901CC96FCD001D6C23 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +201,8 @@
 		EC6B5D711C8DAE6800DB81DD /* QCMapp */ = {
 			isa = PBXGroup;
 			children = (
+				ECC7728E1CC96FA4001D6C23 /* const */,
+				ECC772851CC8C637001D6C23 /* picture */,
 				ECC7727B1CC62755001D6C23 /* questionController */,
 				EC4D6E141C8F1EAE00CEE909 /* welcomeController */,
 				EC6B5DF91C8EC8DD00DB81DD /* webservice */,
@@ -346,6 +359,10 @@
 				EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */,
 				ECC772821CC68944001D6C23 /* QuestionWebServiceAdapter.h */,
 				ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */,
+				ECC772881CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.h */,
+				ECC772891CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m */,
+				ECC7728B1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.h */,
+				ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */,
 			);
 			name = webservice;
 			sourceTree = "<group>";
@@ -357,6 +374,23 @@
 				ECC7727D1CC62828001D6C23 /* QuestionViewController.m */,
 			);
 			name = questionController;
+			sourceTree = "<group>";
+		};
+		ECC772851CC8C637001D6C23 /* picture */ = {
+			isa = PBXGroup;
+			children = (
+				ECC772861CC8C6F2001D6C23 /* check.png */,
+			);
+			name = picture;
+			sourceTree = "<group>";
+		};
+		ECC7728E1CC96FA4001D6C23 /* const */ = {
+			isa = PBXGroup;
+			children = (
+				ECC7728F1CC96FCD001D6C23 /* Constant.h */,
+				ECC772901CC96FCD001D6C23 /* Constant.m */,
+			);
+			name = const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6B5DC01C8EC05000DB81DD /* File.strings in Resources */,
+				ECC772871CC8C6F2001D6C23 /* check.png in Resources */,
 				EC6B5D851C8DAE6800DB81DD /* LaunchScreen.storyboard in Resources */,
 				EC6B5D821C8DAE6800DB81DD /* Assets.xcassets in Resources */,
 				EC6B5D7D1C8DAE6800DB81DD /* Main.storyboard in Resources */,
@@ -469,6 +504,7 @@
 				EC6B5D9D1C8DB07C00DB81DD /* Qcm.m in Sources */,
 				EC6B5DBD1C8DD43800DB81DD /* DAOAnswerUser.m in Sources */,
 				EC6B5DA31C8DB2AA00DB81DD /* GoodAnswer.m in Sources */,
+				ECC772911CC96FCD001D6C23 /* Constant.m in Sources */,
 				EC6B5DDA1C8EC49D00DB81DD /* AFURLSessionManager.m in Sources */,
 				EC6B5DF31C8EC4D400DB81DD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				EC6B5D7A1C8DAE6800DB81DD /* ViewController.m in Sources */,
@@ -481,8 +517,10 @@
 				EC4D6E171C8F1EE900CEE909 /* WelcomeViewController.m in Sources */,
 				EC6B5DF21C8EC4D400DB81DD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EC6B5DF01C8EC4D400DB81DD /* AFAutoPurgingImageCache.m in Sources */,
+				ECC7728A1CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m in Sources */,
 				EC6B5DD71C8EC49D00DB81DD /* AFSecurityPolicy.m in Sources */,
 				EC6B5DBA1C8DD33D00DB81DD /* AnswerUser.m in Sources */,
+				ECC7728D1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m in Sources */,
 				EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */,
 				EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */,
 				EC6B5DB41C8DCFE200DB81DD /* BadAnswer.m in Sources */,

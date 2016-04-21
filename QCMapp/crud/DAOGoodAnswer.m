@@ -7,6 +7,7 @@
 //
 
 #import "DAOGoodAnswer.h"
+#import "Question.h"
 
 @implementation DAOGoodAnswer
 @synthesize appDelegate;
@@ -18,9 +19,11 @@
     context = appDelegate.managedObjectContext;
     
     NSManagedObject* managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"GoodAnswer"
-                                                                   inManagedObjectContext:context];
-    //Set Column in database from entity Qcm
+        inManagedObjectContext:context];
+    
+    //Set Column in database from entity GoodAnswer
     [managedObject setValue:goodAnswer.answerQuestion forKey:@"answerQuestion"];
+    [managedObject setValue:goodAnswer.idQuestion forKey:@"questionId"];
     
     //Insert in database
     [appDelegate saveContext];
@@ -40,6 +43,21 @@
     
     return goodAnswers;
 
+}
+
+-(NSArray*)slectIdQuestionFk:(GoodAnswer*) goodAnswer:(NSManagedObject*)idQuestion{
+    
+    appDelegate = [[UIApplication sharedApplication]delegate];
+    context = appDelegate.managedObjectContext;
+    NSFetchRequest* fetchRequest = [NSFetchRequest new];
+    fetchRequest.entity = [NSEntityDescription entityForName:@"GoodAnswer" inManagedObjectContext:context];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"questionId=%@",idQuestion];
+    [fetchRequest setPredicate:predicate];
+    NSArray *result = [context executeFetchRequest:fetchRequest error:nil];
+    
+    return result;
+    
 }
 
 - (GoodAnswer *)selectById:(NSManagedObject *)goodAnswer{

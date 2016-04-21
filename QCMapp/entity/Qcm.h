@@ -14,7 +14,7 @@
 @property NSString* dateStart;
 @property NSString* dateEnd;
 @property bool isActive;
-@property int idQcm;
+@property NSString* idQcm;
 //@property int idType;
 
 

@@ -11,5 +11,6 @@
 @interface BadAnswer : NSObject
 
 @property NSString* badAnswerQuestion;
+@property NSString* idQuestion;
 
 @end

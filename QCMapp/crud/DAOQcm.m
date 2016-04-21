@@ -50,6 +50,8 @@
     NSFetchRequest* fetchRequest = [NSFetchRequest new];
     context = appDelegate.managedObjectContext;
     
+    //[fetchRequest setResultType:NSManagedObjectIDResultType];
+    
     fetchRequest.entity = [NSEntityDescription entityForName:DAOQcm.ENTITY_QCM inManagedObjectContext:context];
     
     qcms = [context executeFetchRequest:fetchRequest error:nil];

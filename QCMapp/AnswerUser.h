@@ -11,5 +11,7 @@
 @interface AnswerUser : NSObject
 
 @property int sendAnswer;
+@property int sendQuestion;
+@property int sendQcm;
 
 @end

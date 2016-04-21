@@ -18,6 +18,7 @@
 
 - (void)insert:(BadAnswer *)badAnswer;
 - (NSArray*)selectAll;
+- (NSArray*)slectIdQuestionFk:(BadAnswer*) badAnswer:(NSManagedObject*)idQuestion;
 - (BadAnswer *)selectById:(NSManagedObject *)badAnswer;
 - (void) update:(NSManagedObject *)managedObject withQuestion:(BadAnswer *)badAnswer;
 - (void)remove:(NSManagedObject *)managedObject;

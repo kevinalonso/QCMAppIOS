@@ -7,10 +7,18 @@
 //
 
 #import "ViewController.h"
+
+//WebService
 #import "QcmWebServiceAdapter.h"
 #import "QuestionWebServiceAdapter.h"
+#import "GoodAnswerWebServiceAdapter.h"
+#import "BadAnswerWebServiceAdapter.h"
+
+//Method CRUD
 #import "DAOQcm.h"
 #import "DAOQuestion.h"
+#import "DAOGoodAnswer.h"
+#import "DAOBadAnswer.h"
 
 @interface ViewController ()
 
@@ -110,6 +118,66 @@
     
     QuestionWebServiceAdapter* questionService = [QuestionWebServiceAdapter new];
     [questionService getAllQuestion:callbackQuestion];
+    /*********************************************************************************/
+    
+    /****************************GOODANSWER*******************************************/
+    void( ^callbackGoodAnswer)(NSArray*) = ^(NSArray* goodAnswers){
+        DAOGoodAnswer* daoGoodAnswer = [DAOGoodAnswer new];
+        NSArray* checkGoodAnswer = [daoGoodAnswer selectAll];
+        int j = 0;
+        
+        for (GoodAnswer* itemGoodAnswer in goodAnswers) {
+            GoodAnswer* getGoodAnswer;
+            if([checkGoodAnswer count] != 0){
+                getGoodAnswer = [checkGoodAnswer objectAtIndex:j];
+                if([itemGoodAnswer.answerQuestion isEqualToString:getGoodAnswer.answerQuestion]){
+                    NSLog(@"Exist in database %@",itemGoodAnswer.answerQuestion);
+                    j++;
+                } else {
+                    [daoGoodAnswer insert:itemGoodAnswer];
+                    j++;
+                }
+            }
+            if([checkGoodAnswer count] == 0)
+            {
+                [daoGoodAnswer insert:itemGoodAnswer];
+                
+            }
+        }
+    };
+    
+    GoodAnswerWebServiceAdapter* goodAnswerService = [GoodAnswerWebServiceAdapter new];
+    [goodAnswerService getAllGoodAnswer:callbackGoodAnswer];
+    /*********************************************************************************/
+    
+    /****************************BADANSWER*******************************************/
+    void( ^callbackBadAnswer)(NSArray*) = ^(NSArray* badAnswers){
+        DAOBadAnswer* daoBadAnswer = [DAOBadAnswer new];
+        NSArray* checkBadAnswer = [daoBadAnswer selectAll];
+        int j = 0;
+        
+        for (BadAnswer* itemBadAnswer in badAnswers) {
+            BadAnswer* getBadAnswer;
+            if([checkBadAnswer count] != 0){
+                getBadAnswer = [checkBadAnswer objectAtIndex:j];
+                if([itemBadAnswer.badAnswerQuestion isEqualToString:getBadAnswer.badAnswerQuestion]){
+                    NSLog(@"Exist in database %@",itemBadAnswer.badAnswerQuestion);
+                    j++;
+                } else {
+                    [daoBadAnswer insert:itemBadAnswer];
+                    j++;
+                }
+            }
+            if([checkBadAnswer count] == 0)
+            {
+                [daoBadAnswer insert:itemBadAnswer];
+                
+            }
+        }
+    };
+    
+    BadAnswerWebServiceAdapter* badAnswerService = [BadAnswerWebServiceAdapter new];
+    [badAnswerService getAllBadAnswer:callbackBadAnswer];
     /*********************************************************************************/
 }
 

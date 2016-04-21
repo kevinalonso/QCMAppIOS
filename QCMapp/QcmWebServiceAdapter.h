@@ -14,6 +14,7 @@
 
 @property AFHTTPSessionManager* manager;
 
++(NSString*) JSON_QCM_ID;
 +(NSString*) JSON_QCM_NAME;
 +(NSString*) JSON_QCM_DATE_START;
 +(NSString*) JSON_QCM_DATE_END;

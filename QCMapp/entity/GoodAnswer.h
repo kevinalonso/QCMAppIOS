@@ -11,6 +11,6 @@
 @interface GoodAnswer : NSObject
 
 @property NSString* answerQuestion;
-//@property long idQuestion;
+@property NSString* idQuestion;
 
 @end
