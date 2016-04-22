@@ -31,6 +31,8 @@
 @synthesize idBadAnswer;
 @synthesize idQuestionReadNow;
 
+@synthesize start;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -77,8 +79,6 @@
                 self.textAnswer2.text = badAnswer.badAnswerQuestion;
             }
         }
-        
-        counter++;
     }
     checkbox1.backgroundColor = [UIColor grayColor];
     checkbox2.backgroundColor = [UIColor grayColor];
@@ -87,6 +87,7 @@
     [self.view addSubview:checkbox2];
     [self.view addSubview:checkbox3];
     
+    start = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,7 +117,7 @@
 //Button to return at old question
 - (IBAction)prev:(id)sender {
     //TODO Add previous question
-    if(start == YES){
+    if(start == YES || counter == 0){
         
         Constant* constant = [Constant new];
         UIAlertController * alert = [UIAlertController alertControllerWithTitle:constant.MESSAGE_ALERT_INFO
@@ -133,15 +134,9 @@
             }];
         [alert addAction:ok];
     } else {
+        counter = counter - 1;
+        //TODO reverse next Question
         
-    }
-}
-
-//Button to go to the next question
-- (IBAction)next:(id)sender {
-    //TODO Add next question
-    if(counter != [self.resultQuestionFromQcm count]){
-        //Next question
         idQuestionReadNow = [self.resultQuestionFromQcm objectAtIndex:counter];
         Question* getQuestion = [self.resultQuestionFromQcm objectAtIndex:counter];
         self.textQuestion.text = getQuestion.textQuestion;
@@ -149,10 +144,11 @@
         DAOGoodAnswer*daoGoodAnswer = [DAOGoodAnswer new];
         resultGoodAnswer = [daoGoodAnswer slectIdQuestionFk:nil :idQuestionReadNow];
         GoodAnswer* getGoodAnswer = [resultGoodAnswer objectAtIndex:0];
+       
         checkbox2.tag = [self getId:idGoodAnswer];
         self.textGoodAnswer.text = getGoodAnswer.answerQuestion;
         
-        //TODO change badanswer
+        
         DAOBadAnswer* daoBadAnswer = [DAOBadAnswer new];
         resultBadAnswer = [daoBadAnswer slectIdQuestionFk:nil :idQuestionReadNow];
         BadAnswer* getBadAnswerOne = [resultBadAnswer objectAtIndex:0];
@@ -167,7 +163,41 @@
         checkbox3.tag = [self getId:idBadAnswerTwo];
         self.textAnswer2.text = getBadAnswerTwo.badAnswerQuestion;
         
+    }
+}
+
+//Button to go to the next question
+- (IBAction)next:(id)sender {
+    //TODO Add next question
+    if(counter != [self.resultQuestionFromQcm count]){
         counter++;
+        //Next question
+        idQuestionReadNow = [self.resultQuestionFromQcm objectAtIndex:counter];
+        Question* getQuestion = [self.resultQuestionFromQcm objectAtIndex:counter];
+        self.textQuestion.text = getQuestion.textQuestion;
+        
+        DAOGoodAnswer*daoGoodAnswer = [DAOGoodAnswer new];
+        resultGoodAnswer = [daoGoodAnswer slectIdQuestionFk:nil :idQuestionReadNow];
+        GoodAnswer* getGoodAnswer = [resultGoodAnswer objectAtIndex:0];
+        checkbox2.tag = [self getId:idGoodAnswer];
+        self.textGoodAnswer.text = getGoodAnswer.answerQuestion;
+        
+        
+        DAOBadAnswer* daoBadAnswer = [DAOBadAnswer new];
+        resultBadAnswer = [daoBadAnswer slectIdQuestionFk:nil :idQuestionReadNow];
+        BadAnswer* getBadAnswerOne = [resultBadAnswer objectAtIndex:0];
+        BadAnswer* getBadAnswerTwo = [resultBadAnswer objectAtIndex:1];
+        
+        NSManagedObject* idBadAnswerOne = [self.resultBadAnswer objectAtIndex:0];
+        NSManagedObject* idBadAnswerTwo = [self.resultBadAnswer objectAtIndex:1];
+        checkbox1.tag = [self getId:idBadAnswerOne];
+        
+        self.textAnswer1.text = getBadAnswerOne.badAnswerQuestion;
+        
+        checkbox3.tag = [self getId:idBadAnswerTwo];
+        self.textAnswer2.text = getBadAnswerTwo.badAnswerQuestion;
+        
+        start = NO;
         
     } else {
         Constant* constant = [Constant new];
@@ -184,7 +214,10 @@
     {
         [btn setSelected:YES];
         [btn setImage:[UIImage imageNamed:@"check.png"] forState:UIControlStateSelected];
-    }else{
+        
+        
+        
+    } else {
         [btn setSelected:NO];
     }
 }

@@ -39,4 +39,6 @@
 @property NSManagedObject* idBadAnswer;
 @property NSManagedObject* idQuestionReadNow;
 
+@property BOOL start;
+
 @end

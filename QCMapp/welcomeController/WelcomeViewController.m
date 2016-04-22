@@ -64,6 +64,7 @@
     
     //Add elment in the field list
     cell.textLabel.text = [[self.resQcm objectAtIndex:indexPath.row]nameQcm];
+    cell.textLabel.textColor = [UIColor whiteColor];
      
     return cell;
 }
