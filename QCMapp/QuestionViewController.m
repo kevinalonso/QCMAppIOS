@@ -11,6 +11,8 @@
 #import "DAOBadAnswer.h"
 #import "DAOGoodAnswer.h"
 #import "Constant.h"
+#import "AnswerUser.h"
+#import "UserAnswerWebServiceAdapter.h"
 
 @interface QuestionViewController ()
 
@@ -19,17 +21,22 @@
 
 @implementation QuestionViewController
 
+@synthesize setAnswerUser;
+
 @synthesize counter;
 @synthesize checkbox1;
 @synthesize checkbox2;
 @synthesize checkbox3;
+@synthesize senderStyle;
 
 @synthesize resultGoodAnswer;
 @synthesize resultBadAnswer;
+@synthesize userAnswerSend;
 
 @synthesize idGoodAnswer;
 @synthesize idBadAnswer;
 @synthesize idQuestionReadNow;
+@synthesize idQcm;
 
 @synthesize start;
 
@@ -37,9 +44,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Hidde send button
+    senderStyle.hidden = YES;
+    
+    //instancied NSArray to send Answer
+    userAnswerSend = [NSMutableArray array];
     DAOGoodAnswer* daoGoodAnswer = [DAOGoodAnswer new];
     DAOBadAnswer* daoBadAnswer = [DAOBadAnswer new];
     
+    //Create checkbox
     checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 135,20, 20)];
     [checkbox1 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -49,6 +62,7 @@
     checkbox3 = [[UIButton alloc] initWithFrame:CGRectMake(10, 260,20, 20)];
     [checkbox3 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     
+    //Get the first question and goodAnswer and badAnswer
     for (int j = 0; j < 1; j++) {
         
         Question* getFirstQuestion = [self.resultQuestionFromQcm objectAtIndex:j];
@@ -125,7 +139,7 @@
             preferredStyle:UIAlertControllerStyleAlert];
         
         [self presentViewController:alert animated:YES completion:nil];
-        
+        //Alert for the user (Toast message)
         UIAlertAction* ok = [UIAlertAction
             actionWithTitle:@"OK"
             style:UIAlertActionStyleDefault
@@ -135,7 +149,7 @@
         [alert addAction:ok];
     } else {
         counter = counter - 1;
-        //TODO reverse next Question
+        //Go to the previous question
         
         idQuestionReadNow = [self.resultQuestionFromQcm objectAtIndex:counter];
         Question* getQuestion = [self.resultQuestionFromQcm objectAtIndex:counter];
@@ -166,11 +180,35 @@
     }
 }
 
+//SAve Answer in database from webservice
+- (IBAction)sendAnswer:(id)sender {
+    UserAnswerWebServiceAdapter* userAnswerWebServiceAdapter = [UserAnswerWebServiceAdapter new];
+    NSLog(@"count user send %lu",[userAnswerSend count]);
+    for (int k = 0; k < [userAnswerSend count]; k++) {
+        AnswerUser* item = userAnswerSend[k];
+        
+        void( ^callback)(AnswerUser*) = ^(AnswerUser* answerUser){
+           
+            answerUser.sendAnswer = item.sendAnswer;
+            answerUser.sendQcm = item.sendQcm;
+            answerUser.sendQuestion = item.sendQuestion;
+        };
+        [userAnswerWebServiceAdapter createUserAnswer:item withCallback:callback];
+    }
+}
+
 //Button to go to the next question
 - (IBAction)next:(id)sender {
     //TODO Add next question
-    if(counter != [self.resultQuestionFromQcm count]){
+    bool end = NO;
+    if(counter <= [self.resultQuestionFromQcm count]){
         counter++;
+        if(counter == [self.resultQuestionFromQcm count]){
+            counter = counter - 1;
+            end = YES;
+        }
+        NSLog(@"Counter = %d",counter);
+        NSLog(@"Count Array Question = %lu",(unsigned long)[self.resultQuestionFromQcm count]);
         //Next question
         idQuestionReadNow = [self.resultQuestionFromQcm objectAtIndex:counter];
         Question* getQuestion = [self.resultQuestionFromQcm objectAtIndex:counter];
@@ -198,13 +236,24 @@
         self.textAnswer2.text = getBadAnswerTwo.badAnswerQuestion;
         
         start = NO;
+        if(setAnswerUser != 0){
+            [userAnswerSend addObject:setAnswerUser];
+            checkbox1.selected = NO;
+            checkbox2.selected = NO;
+            checkbox3.selected = NO;
+        }
+    }
+    if (end == YES) {
         
-    } else {
+        //Message at the end of qcm
         Constant* constant = [Constant new];
         self.textQuestion.text = constant.MESSAGE_END_QCM;
         self.textAnswer1.text = constant.MESSAGE_END_QCM;
         self.textAnswer2.text = constant.MESSAGE_END_QCM;
         self.textGoodAnswer.text = constant.MESSAGE_END_QCM;
+        
+        senderStyle.hidden = NO;
+        
     }
 }
 
@@ -213,9 +262,16 @@
     if(!btn.isSelected)
     {
         [btn setSelected:YES];
+        //Add puce in checkbox
         [btn setImage:[UIImage imageNamed:@"check.png"] forState:UIControlStateSelected];
         
+        //Get answer from user
+        setAnswerUser = [AnswerUser new];
+        setAnswerUser.sendAnswer = btn.tag;
+        setAnswerUser.sendQcm = [self getId:idQcm];
+        setAnswerUser.sendQuestion = [self getId:idQuestionReadNow];
         
+        //[userAnswerSend addObject:setAnswerUser];
         
     } else {
         [btn setSelected:NO];

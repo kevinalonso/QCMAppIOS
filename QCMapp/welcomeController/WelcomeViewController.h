@@ -11,6 +11,8 @@
 
 @interface WelcomeViewController : UITableViewController
 
+//Result of database to get Qcm in List
 @property NSArray* resQcm;
+
 @property AppDelegate* appDelegate;
 @end

@@ -16,10 +16,19 @@
 @property AppDelegate* appDelegate;
 @property NSManagedObjectContext* context;
 
+//Insert in database
 - (void)insert:(AnswerUser *)answerUser;
+
+//Select in database
 - (NSArray*)selectAll;
+
+//Select one Qcm in database
 - (AnswerUser *)selectById:(NSManagedObject *)answerUser;
+
+//Update Qcm in database
 - (void) update:(NSManagedObject *)managedObject withQuestion:(AnswerUser *)answerUser;
+
+//Remove in database
 - (void)remove:(NSManagedObject *)managedObject;
 
 @end

@@ -93,6 +93,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOz-Ja-mxo">
+                                <rect key="frame" x="273" y="550" width="55" height="30"/>
+                                <state key="normal" title="Envoyer"/>
+                                <connections>
+                                    <action selector="sendAnswer:" destination="PSx-sJ-sWu" eventType="touchUpInside" id="CZ6-7k-tPz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -104,6 +111,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="senderStyle" destination="bOz-Ja-mxo" id="owh-7d-Eff"/>
                         <outlet property="textAnswer1" destination="cg4-VM-TSG" id="dHh-qN-0lO"/>
                         <outlet property="textAnswer2" destination="ggT-sD-pLR" id="vch-qe-Wdp"/>
                         <outlet property="textGoodAnswer" destination="jbH-k0-ppa" id="VeC-XE-534"/>

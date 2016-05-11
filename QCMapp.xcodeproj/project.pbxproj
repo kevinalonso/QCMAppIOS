@@ -51,6 +51,8 @@
 		ECC7728A1CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772891CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m */; };
 		ECC7728D1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */; };
 		ECC772911CC96FCD001D6C23 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772901CC96FCD001D6C23 /* Constant.m */; };
+		ECC7729C1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7729B1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m */; };
+		ECC7729F1CDAB38E001D6C23 /* UserQcm.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7729E1CDAB38D001D6C23 /* UserQcm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,10 @@
 		ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadAnswerWebServiceAdapter.m; sourceTree = "<group>"; };
 		ECC7728F1CC96FCD001D6C23 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		ECC772901CC96FCD001D6C23 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		ECC7729A1CDA3266001D6C23 /* UserAnswerWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAnswerWebServiceAdapter.h; sourceTree = "<group>"; };
+		ECC7729B1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAnswerWebServiceAdapter.m; sourceTree = "<group>"; };
+		ECC7729D1CDAB38D001D6C23 /* UserQcm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserQcm.h; sourceTree = "<group>"; };
+		ECC7729E1CDAB38D001D6C23 /* UserQcm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserQcm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +262,8 @@
 				EC6B5DB91C8DD33D00DB81DD /* AnswerUser.m */,
 				EC6B5DFD1C8ECACC00DB81DD /* Weather.h */,
 				EC6B5DFE1C8ECACC00DB81DD /* Weather.m */,
+				ECC7729D1CDAB38D001D6C23 /* UserQcm.h */,
+				ECC7729E1CDAB38D001D6C23 /* UserQcm.m */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -363,6 +371,8 @@
 				ECC772891CC8CC62001D6C23 /* GoodAnswerWebServiceAdapter.m */,
 				ECC7728B1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.h */,
 				ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */,
+				ECC7729A1CDA3266001D6C23 /* UserAnswerWebServiceAdapter.h */,
+				ECC7729B1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m */,
 			);
 			name = webservice;
 			sourceTree = "<group>";
@@ -523,6 +533,7 @@
 				ECC7728D1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m in Sources */,
 				EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */,
 				EC6B5DB71C8DD07900DB81DD /* DAOBadAnswer.m in Sources */,
+				ECC7729F1CDAB38E001D6C23 /* UserQcm.m in Sources */,
 				EC6B5DB41C8DCFE200DB81DD /* BadAnswer.m in Sources */,
 				EC6B5DF71C8EC4D400DB81DD /* UIRefreshControl+AFNetworking.m in Sources */,
 				ECC7727E1CC62828001D6C23 /* QuestionViewController.m in Sources */,
@@ -530,6 +541,7 @@
 				EC6B5DD51C8EC49D00DB81DD /* AFHTTPSessionManager.m in Sources */,
 				EC6B5DFF1C8ECACC00DB81DD /* Weather.m in Sources */,
 				EC6B5DF81C8EC4D400DB81DD /* UIWebView+AFNetworking.m in Sources */,
+				ECC7729C1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m in Sources */,
 				EC6B5DAB1C8DBCCF00DB81DD /* QcmData.xcdatamodeld in Sources */,
 				EC6B5D741C8DAE6800DB81DD /* main.m in Sources */,
 				EC6B5DF11C8EC4D400DB81DD /* AFImageDownloader.m in Sources */,

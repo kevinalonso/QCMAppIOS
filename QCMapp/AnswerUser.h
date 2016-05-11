@@ -10,8 +10,13 @@
 
 @interface AnswerUser : NSObject
 
-@property int sendAnswer;
-@property int sendQuestion;
-@property int sendQcm;
+//Id Answer
+@property NSInteger sendAnswer;
+
+//Id Question
+@property NSInteger sendQuestion;
+
+//Id Qcm
+@property NSInteger sendQcm;
 
 @end

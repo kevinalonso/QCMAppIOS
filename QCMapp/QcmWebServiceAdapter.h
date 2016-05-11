@@ -14,6 +14,7 @@
 
 @property AFHTTPSessionManager* manager;
 
+//Name element in the json flow to extract
 +(NSString*) JSON_QCM_ID;
 +(NSString*) JSON_QCM_NAME;
 +(NSString*) JSON_QCM_DATE_START;
@@ -23,13 +24,25 @@
 +(NSString *)URL_ALL_QCM;
 +(NSString *)URL_ONE_QCM;
 
-
+//Retunr on qcm
 -(void)getOneQcm:(void (^)(Qcm*))callback;
+
+//Return all qcm in database
 -(void)getAllQcm:(void (^)(NSArray*))callback;
+
+//get qcm from json
 -(Qcm*)extract:(NSDictionary*)json;
+
+//Extract all qcm from json
 -(NSMutableArray*)extractAll:(NSDictionary*)json;
+
+//Add new qcm in database in the mobile
 -(void)createQcm:(Qcm*) qcm withCallback:(void (^)(Qcm*))callback;
+
+//Update qcm in databse from the mobile
 -(void)updateQcm:(Qcm*) qcm withCallback:(void (^)(Qcm*))callback;
+
+//Transform qcm from entity to json
 -(NSDictionary*)itemToJson:(Qcm*)qcm;
 
 @end

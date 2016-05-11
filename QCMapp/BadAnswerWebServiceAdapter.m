@@ -17,7 +17,7 @@
 +(NSString*) JSON_BADANSWER_FK{ return @"idQuestion"; }
 +(NSString*) JSON_ARRAY_BADANSWER{ return @"badAnswers"; }
 +(NSString *)URL_ALL_BADANSWER{ return @"http://192.168.1.14/app_dev.php/api/all/bad/answer"; }
-
+//GET BADANSWER
 -(void)getAllBadAnswer:(void (^)(NSArray*))callback{
     
     manager = [AFHTTPSessionManager manager];
@@ -35,6 +35,7 @@
     }];
 }
 
+//EXTRACT BADANSWER IN JSON FLOW
 -(BadAnswer*)extract:(NSDictionary*)json{
     BadAnswer* badAnswer = nil;
     if (json != nil) {
@@ -47,6 +48,7 @@
     return badAnswer;
 }
 
+//EXTRACT BADANSWER FROM JSON FLOW
 -(NSMutableArray*)extractAll:(NSDictionary*)json{
     NSMutableArray* badAnswers = nil;
     
@@ -64,6 +66,7 @@
     return badAnswers;
 }
 
+//CREATE BADANSWER
 -(void)createBadAnswer:(BadAnswer*) badAnswer withCallback:(void (^)(BadAnswer*))callback{
     manager = [AFHTTPSessionManager manager];
     
@@ -82,6 +85,7 @@
     }];
 }
 
+//UPDATE BADANSWER
 -(void)updateBadAnswer:(BadAnswer*) badAnswer withCallback:(void (^)(BadAnswer*))callback{
     manager = [AFHTTPSessionManager manager];
     
@@ -99,6 +103,7 @@
     }];
 }
 
+//Get and set item in class from json flow
 -(NSDictionary*)itemToJson:(BadAnswer*)badAnswer{
     NSDictionary* result = nil;
     if(badAnswer != nil){

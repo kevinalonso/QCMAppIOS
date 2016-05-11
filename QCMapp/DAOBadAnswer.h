@@ -16,11 +16,22 @@
 @property AppDelegate* appDelegate;
 @property NSManagedObjectContext* context;
 
+//Insert in database
 - (void)insert:(BadAnswer *)badAnswer;
+
+//Select in database
 - (NSArray*)selectAll;
+
+//Select foreign key in database
 - (NSArray*)slectIdQuestionFk:(BadAnswer*) badAnswer:(NSManagedObject*)idQuestion;
+
+//Select one BadAnswer in database
 - (BadAnswer *)selectById:(NSManagedObject *)badAnswer;
+
+//Update BadAnswer in database
 - (void) update:(NSManagedObject *)managedObject withQuestion:(BadAnswer *)badAnswer;
+
+//Remove in database
 - (void)remove:(NSManagedObject *)managedObject;
 
 @end

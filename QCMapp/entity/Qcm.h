@@ -10,10 +10,19 @@
 
 @interface Qcm : NSObject
 
+//Name Qcm
 @property NSString* nameQcm;
+
+//DateStart Qcm
 @property NSString* dateStart;
+
+//DateEnd Qcm
 @property NSString* dateEnd;
+
+//Qcm IsActive
 @property bool isActive;
+
+//Id Qcm
 @property NSString* idQcm;
 //@property int idType;
 

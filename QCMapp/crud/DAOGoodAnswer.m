@@ -13,6 +13,7 @@
 @synthesize appDelegate;
 @synthesize context;
 
+//Use to insert Qcm in database
 - (void)insert:(GoodAnswer *)goodAnswer{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -29,6 +30,7 @@
     [appDelegate saveContext];
 }
 
+//Use to selected all item in table Qcm
 - (NSArray*)selectAll{
     
     NSArray* goodAnswers = [NSArray new];
@@ -45,6 +47,7 @@
 
 }
 
+//Select foreign key from GoodAnswer in database
 -(NSArray*)slectIdQuestionFk:(GoodAnswer*) goodAnswer:(NSManagedObject*)idQuestion{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
@@ -60,6 +63,7 @@
     
 }
 
+//Use to selected one item in table Qcm
 - (GoodAnswer *)selectById:(NSManagedObject *)goodAnswer{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
@@ -69,6 +73,7 @@
     return manageObject;
 }
 
+//Use to update in database
 - (void) update:(NSManagedObject *)managedObject withQuestion:(GoodAnswer *)goodAnswer{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -81,6 +86,7 @@
     
 }
 
+//Use to remove in database
 - (void)remove:(NSManagedObject *)managedObject{
     
     appDelegate = [[UIApplication sharedApplication] delegate];

@@ -19,11 +19,22 @@
 
 @property NSManagedObject* object;
 
+//Insert in database
 - (void)insert:(Question *)question;
+
+//Select in database
 - (NSArray*)selectAll;
+
+//Select foreign key in database
 - (NSArray*)slectIdQcmFk:(Qcm*) qcm:(NSManagedObject*)idQcm;
+
+//Select one Question in database
 - (Question *)selectById:(NSManagedObject *)question;
+
+//Update Question in database
 - (void) update:(NSManagedObject *)managedObject withQuestion:(Question *)question;
+
+//Remove Question in database
 - (void)remove:(NSManagedObject *)managedObject;
 
 @end

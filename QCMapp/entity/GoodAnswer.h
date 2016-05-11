@@ -10,7 +10,10 @@
 
 @interface GoodAnswer : NSObject
 
+//Text GoodAnswer
 @property NSString* answerQuestion;
+
+//Id Question
 @property NSString* idQuestion;
 
 @end

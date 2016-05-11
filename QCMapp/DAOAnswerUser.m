@@ -12,6 +12,7 @@
 @synthesize appDelegate;
 @synthesize context;
 
+//Use to insert AnswerUser in database
 - (void)insert:(AnswerUser *)answerUser{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -26,6 +27,8 @@
     [appDelegate saveContext];
 
 }
+
+//Use to selected all item in table AnswerUser
 - (NSArray*)selectAll{
     
     NSArray* answerUsers = [NSArray new];
@@ -42,6 +45,7 @@
     
 }
 
+//Use to selected one item in table AnswerUser
 - (AnswerUser *)selectById:(NSManagedObject *)answerUser{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
@@ -51,6 +55,7 @@
     return manageObject;
 }
 
+//Use to update in database
 - (void) update:(NSManagedObject *)managedObject withQuestion:(AnswerUser *)answerUser{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -63,6 +68,7 @@
 
 }
 
+//Use to remove in database
 - (void)remove:(NSManagedObject *)managedObject{
     
     appDelegate = [[UIApplication sharedApplication] delegate];

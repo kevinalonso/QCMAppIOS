@@ -18,6 +18,7 @@
 +(NSString*) JSON_ARRAY_GOODANSWER{ return @"goodAnswers"; }
 +(NSString *)URL_ALL_GOODANSWER{ return @"http://192.168.1.14/app_dev.php/api/all/good/answer"; }
 
+//GET ALL GOODANSWER
 -(void)getAllGoodAnswer:(void (^)(NSArray*))callback{
     
     manager = [AFHTTPSessionManager manager];
@@ -35,6 +36,7 @@
     }];
 }
 
+//EXTRACT GOODANSWER IN JSON FLOW
 -(GoodAnswer*)extract:(NSDictionary*)json{
     GoodAnswer* goodAnswer = nil;
     if (json != nil) {
@@ -47,6 +49,7 @@
     return goodAnswer;
 }
 
+//EXTRACT GOODANSWER FROM JSON FLOW
 -(NSMutableArray*)extractAll:(NSDictionary*)json{
     NSMutableArray* goodAnswers = nil;
     
@@ -64,6 +67,7 @@
     return goodAnswers;
 }
 
+//CREATE GOODANSWER
 -(void)createGoodAnswer:(GoodAnswer*) goodAnswer withCallback:(void (^)(GoodAnswer*))callback{
     manager = [AFHTTPSessionManager manager];
     
@@ -82,6 +86,7 @@
     }];
 }
 
+//UPDATE GOODANSWER
 -(void)updateGoodAnswer:(GoodAnswer*) goodAnswer withCallback:(void (^)(GoodAnswer*))callback{
     manager = [AFHTTPSessionManager manager];
     
@@ -99,6 +104,7 @@
     }];
 }
 
+//Get and set item in class from json flow
 -(NSDictionary*)itemToJson:(GoodAnswer*)goodAnswer{
     NSDictionary* result = nil;
     if(goodAnswer != nil){

@@ -19,7 +19,7 @@
 +(NSString *)URL_ALL_QUESTION{ return @"http://192.168.1.14/app_dev.php/api/all/question"; }
 +(NSString *)URL_ONE_QUESTION{ return @"http://192.168.1.14/app_dev.php/api/all/question"; }
 
-
+//GET ONE QCM
 -(void)getOneQuestion:(void (^)(Question*))callback{
     
     manager = [AFHTTPSessionManager manager];
@@ -37,6 +37,7 @@
     }];
 }
 
+//GET ALL QUESTION
 -(void)getAllQuestion:(void (^)(NSArray*))callback{
     manager = [AFHTTPSessionManager manager];
     NSString* url = QuestionWebServiceAdapter.URL_ALL_QUESTION;
@@ -54,6 +55,7 @@
     }];
 }
 
+//EXTRACT QUESTION IN JSON FLOW
 -(Question*)extract:(NSDictionary*)json{
     Question* question = nil;
     
@@ -67,6 +69,7 @@
     return question;
 }
 
+//EXTRACT QCM FROM JSON FLOW
 -(NSMutableArray*)extractAll:(NSDictionary*)json{
     NSMutableArray* questions = nil;
     
@@ -86,6 +89,7 @@
     return questions;
 }
 
+//CREATE QUESTION
 -(void)createQuestion:(Question*) question withCallback:(void (^)(Question*))callback{
     manager = [AFHTTPSessionManager manager];
     
@@ -104,6 +108,7 @@
     }];
 }
 
+//UPDATE QUESTION
 -(void)updateQuestion:(Question*) question withCallback:(void (^)(Question*))callback{
     manager = [AFHTTPSessionManager manager];
     
@@ -121,6 +126,7 @@
     }];
 }
 
+//Get and set item in class from json flow
 -(NSDictionary*)itemToJson:(Question*)question{
     NSDictionary* result = nil;
     if(question != nil){

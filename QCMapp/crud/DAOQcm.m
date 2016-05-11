@@ -60,6 +60,7 @@
     
 }
 
+//Use to selected one item in table Qcm
 - (Qcm *)selectById:(NSManagedObject *)qcm{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
@@ -69,6 +70,7 @@
     return manageObject;
 }
 
+//Use to update in database
 - (void) update:(NSManagedObject *)managedObject withQcm:(Qcm *)qcm{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -85,6 +87,7 @@
 
 }
 
+//Use to remove in database
 - (void)remove:(NSManagedObject *)managedObject{
     
     appDelegate = [[UIApplication sharedApplication] delegate];

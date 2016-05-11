@@ -10,8 +10,11 @@
 
 @interface Question : NSObject
 
+//text Question
 @property NSString* textQuestion;
 //@property long idType;
+
+//Id Qcm
 @property NSString* idQcm;
 
 @end

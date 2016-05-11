@@ -14,7 +14,7 @@
 @synthesize appDelegate;
 @synthesize context;
 
-
+//Use to insert Question in database
 - (void)insert:(Question *)question{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -32,6 +32,7 @@
     [appDelegate saveContext];
 }
 
+//Use to selected all item in table Question
 - (NSArray*)selectAll{
     
     NSArray* questions = [NSArray new];
@@ -47,18 +48,13 @@
 
 }
 
+//Select foreign key from Qcm in database
 -(NSArray*)slectIdQcmFk:(Qcm*) qcm:(NSManagedObject*)idQcm{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
     context = appDelegate.managedObjectContext;
     NSFetchRequest* fetchRequest = [NSFetchRequest new];
     fetchRequest.entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
-    
-    /*NSFetchRequest* requestId = [NSFetchRequest new];
-    [requestId setEntity:[NSEntityDescription entityForName:DAOQcm.ENTITY_QCM inManagedObjectContext:context]];
-    [requestId setResultType:NSManagedObjectIDResultType];
-    NSArray* resID = [NSArray new];
-    resID = [context executeFetchRequest:requestId error:nil];*/
     
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qcmId=%@",idQcm];
@@ -69,6 +65,7 @@
     
 }
 
+//Use to selected one item in table Question
 - (Question *)selectById:(NSManagedObject *)question{
     
     appDelegate = [[UIApplication sharedApplication]delegate];
@@ -78,6 +75,7 @@
     return manageObject;
 }
 
+//Use to update in database
 - (void) update:(NSManagedObject *)managedObject withQuestion:(Question *)question{
     
     appDelegate = [[UIApplication sharedApplication] delegate];
@@ -90,6 +88,7 @@
 
 }
 
+//Use to remove in database
 - (void)remove:(NSManagedObject *)managedObject{
     
     appDelegate = [[UIApplication sharedApplication] delegate];

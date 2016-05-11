@@ -29,6 +29,7 @@
     appDelegate = [[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context = appDelegate.managedObjectContext;
     
+    //Select all Qcm in database
     DAOQcm* daoQcm = [DAOQcm new];
     self.resQcm = [daoQcm selectAll];
 }
@@ -109,16 +110,21 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    //Go to the question view
     QuestionViewController* questionViewController = segue.destinationViewController;
     
+    //Get selected row by user
     NSManagedObject* idSelected = [self.resQcm objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     
-    
+    //Add element qcm selected entity Qcm
     self->qcmClick = [self.resQcm objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     
+    //Get question to link to this Qcm
     DAOQuestion *daoQuestion = [DAOQuestion new];
     NSArray* res = [daoQuestion slectIdQcmFk:qcmClick :idSelected];
     
+    //Add id Qcm to the variable in question view and the question link to this qcm
+    questionViewController.idQcm = idSelected;
     questionViewController.resultQuestionFromQcm = res;
 
 }

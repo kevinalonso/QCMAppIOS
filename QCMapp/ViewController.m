@@ -19,6 +19,8 @@
 #import "DAOQuestion.h"
 #import "DAOGoodAnswer.h"
 #import "DAOBadAnswer.h"
+#include <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonKeyDerivation.h>
 
 @interface ViewController ()
 
@@ -29,21 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    //Récupération des élément du JSON dans ma vue
-    //Alimentation des élménrt avec la méthode callback
-    //Attention la méthode void ici doit toujours etre au deçus de l'appel du web service
-    /*void( ^callback)(Weather*) = ^(Weather* weather){
-        self.descriptionLabel.text = weather.description;
-        self.idServerLabel.text = [NSString stringWithFormat:@"%d",weather.idServer];
-        self.mainLabel.text = weather.main;
-        
-    };
-    
-    //Utilisation de la méthode callback
-    weatherWebServiceAdapter* services = [weatherWebServiceAdapter new];
-    [services getWeather:callback];*/
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +51,7 @@
         int i = 0;
         
         NSLog(@"Size of NSArray checkQcm = %lu",[checkQcm count]);
-        
+        //Check if qcm from JSON exist in database
         for (Qcm* item in qcms) {
             Qcm* getQcm;
             if([checkQcm count] != 0){
@@ -83,7 +71,7 @@
             }
         }
     };
-    
+    //Call websrvice to get Qcm
     QcmWebServiceAdapter* services = [QcmWebServiceAdapter new];
     [services getAllQcm:callback];
     /***************************************************************************/
@@ -95,7 +83,7 @@
         int j = 0;
         
         NSLog(@"Size of NSArray checkQcm = %lu",[checkQuestion count]);
-        
+        //Check if question from JSON exist in database
         for (Question* itemQuestion in questions) {
             Question* getQuestion;
             if([checkQuestion count] != 0){
@@ -116,6 +104,7 @@
         }
     };
     
+    //Call websrvice to get Question
     QuestionWebServiceAdapter* questionService = [QuestionWebServiceAdapter new];
     [questionService getAllQuestion:callbackQuestion];
     /*********************************************************************************/
@@ -126,6 +115,7 @@
         NSArray* checkGoodAnswer = [daoGoodAnswer selectAll];
         int j = 0;
         
+        //Check if goodAnswer from JSON exist in database
         for (GoodAnswer* itemGoodAnswer in goodAnswers) {
             GoodAnswer* getGoodAnswer;
             if([checkGoodAnswer count] != 0){
@@ -146,6 +136,7 @@
         }
     };
     
+    //Call websrvice to get goodAnswer
     GoodAnswerWebServiceAdapter* goodAnswerService = [GoodAnswerWebServiceAdapter new];
     [goodAnswerService getAllGoodAnswer:callbackGoodAnswer];
     /*********************************************************************************/
@@ -156,6 +147,7 @@
         NSArray* checkBadAnswer = [daoBadAnswer selectAll];
         int j = 0;
         
+        //Check if badAnswer from JSON exist in database
         for (BadAnswer* itemBadAnswer in badAnswers) {
             BadAnswer* getBadAnswer;
             if([checkBadAnswer count] != 0){
@@ -176,6 +168,7 @@
         }
     };
     
+    //Call websrvice to get badAnswer
     BadAnswerWebServiceAdapter* badAnswerService = [BadAnswerWebServiceAdapter new];
     [badAnswerService getAllBadAnswer:callbackBadAnswer];
     /*********************************************************************************/

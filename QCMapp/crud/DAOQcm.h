@@ -22,11 +22,19 @@
 +(NSString*) QCM_DATE_END;
 +(NSString*) QCM_IS_ACTIVE;
 
-
+//Insert in database
 - (void)insert:(Qcm *)qcm;
+
+//Select in database
 - (NSArray*)selectAll;
+
+//Select one Qcm in database
 - (Qcm *)selectById:(NSManagedObject *)qcm;
+
+//Update Qcm in database
 - (void) update:(NSManagedObject *)managedObject withQcm:(Qcm *)qcm;
+
+//Remove Qcm in database
 - (void)remove:(NSManagedObject *)managedObject;
 
 @end

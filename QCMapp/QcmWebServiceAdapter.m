@@ -14,6 +14,7 @@
 
 @synthesize manager;
 
+
 +(NSString*) JSON_QCM_NAME{ return @"nameQcm"; }
 +(NSString*) JSON_QCM_ID{return @"id";}
 +(NSString*) JSON_QCM_DATE_START{ return @"dateStart"; }
@@ -23,7 +24,7 @@
 +(NSString *)URL_ALL_QCM{ return @"http://192.168.1.14/app_dev.php/api/all/qcm"; }
 +(NSString *)URL_ONE_QCM{ return @"http://192.168.1.14/app_dev.php/api/all/qcm"; }
 
-//GET QCM
+//GET ONE QCM
 -(void)getOneQcm:(void (^)(Qcm*))callback{
     
     manager = [AFHTTPSessionManager manager];
