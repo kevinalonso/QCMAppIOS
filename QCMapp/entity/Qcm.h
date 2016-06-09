@@ -24,7 +24,9 @@
 
 //Id Qcm
 @property NSString* idQcm;
-//@property int idType;
+
+//Id Type FK
+@property NSUInteger idType;
 
 
 @end

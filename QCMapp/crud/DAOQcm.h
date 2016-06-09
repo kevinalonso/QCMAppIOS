@@ -21,6 +21,7 @@
 +(NSString*) QCM_DATE_START;
 +(NSString*) QCM_DATE_END;
 +(NSString*) QCM_IS_ACTIVE;
++(NSString*) QCM_TYPE;
 
 //Insert in database
 - (void)insert:(Qcm *)qcm;

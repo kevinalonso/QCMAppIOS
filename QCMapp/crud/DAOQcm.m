@@ -20,6 +20,7 @@
 +(NSString*) QCM_DATE_START{ return @"dateStart"; }
 +(NSString*) QCM_DATE_END{ return @"dateEnd"; }
 +(NSString*) QCM_IS_ACTIVE{ return @"isActive"; }
++(NSString*) QCM_TYPE{ return @"idType";}
 
 //Use to insert Qcm in database
 - (void)insert:(Qcm *)qcm{
@@ -35,7 +36,7 @@
     [managedObject setValue:qcm.dateStart forKey:DAOQcm.QCM_DATE_START];
     [managedObject setValue:qcm.dateEnd forKey:DAOQcm.QCM_DATE_END];
     [managedObject setValue:[NSNumber numberWithBool:qcm.isActive]forKey:DAOQcm.QCM_IS_ACTIVE];
-    //[managedObject setValue:[NSNumber numberWithInt:qcm.idType] forKey:@"idType"];
+    //[managedObject setValue:[NSNumber numberWithInteger:qcm.idType] forKey:DAOQcm.QCM_TYPE];
     
     //Insert in database
     [appDelegate saveContext];
@@ -81,7 +82,7 @@
     [managedObject setValue:qcm.dateStart forKey:DAOQcm.QCM_DATE_START];
     [managedObject setValue:qcm.dateEnd forKey:DAOQcm.QCM_DATE_END];
     [managedObject setValue:[NSNumber numberWithBool:qcm.isActive]forKey:DAOQcm.QCM_IS_ACTIVE];
-    //[managedObject setValue:[NSNumber numberWithInt:qcm.idType] forKey:@"idType"];
+    //[managedObject setValue:[NSNumber numberWithInt:qcm.idType] forKey:DAOQcm.QCM_TYPE];
     
     [appDelegate saveContext];
 

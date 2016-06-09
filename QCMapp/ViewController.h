@@ -14,6 +14,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 
+@property NSMutableArray* resUsers;
+@property (weak, nonatomic) IBOutlet UITextField *loginEditText;
+@property (weak, nonatomic) IBOutlet UITextField *passwordEditText;
+
+@property bool checked;
+
 //Button to access Qcm list
 - (IBAction)sendConnectionQcm:(id)sender;
 

@@ -20,6 +20,7 @@
 +(NSString*) JSON_QCM_DATE_START;
 +(NSString*) JSON_QCM_DATE_END;
 +(NSString*) JSON_QCM_IS_ACTIVE;
++(NSString*) JSON_QCM_TYPE;
 +(NSString*) JSON_ARRAY_QCM;
 +(NSString *)URL_ALL_QCM;
 +(NSString *)URL_ONE_QCM;

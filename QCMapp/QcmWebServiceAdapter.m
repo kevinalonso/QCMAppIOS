@@ -20,7 +20,8 @@
 +(NSString*) JSON_QCM_DATE_START{ return @"dateStart"; }
 +(NSString*) JSON_QCM_DATE_END{ return @"dateEnd"; }
 +(NSString*) JSON_QCM_IS_ACTIVE{ return @"isActive"; }
-+(NSString*) JSON_ARRAY_QCM{ return @"qcm"; }
++(NSString *)JSON_QCM_TYPE{ return @"idType"; }
++(NSString*) JSON_ARRAY_QCM{ return @"qcms"; }
 +(NSString *)URL_ALL_QCM{ return @"http://192.168.1.14/app_dev.php/api/all/qcm"; }
 +(NSString *)URL_ONE_QCM{ return @"http://192.168.1.14/app_dev.php/api/all/qcm"; }
 
@@ -73,6 +74,7 @@
         qcm.dateStart= [json objectForKey:QcmWebServiceAdapter.JSON_QCM_DATE_START];
         qcm.dateEnd = [json objectForKey:QcmWebServiceAdapter.JSON_QCM_DATE_END];
         qcm.isActive = [[json objectForKey:QcmWebServiceAdapter.JSON_QCM_IS_ACTIVE] boolValue];
+        qcm.idType = [[json objectForKey:QcmWebServiceAdapter.JSON_QCM_TYPE]integerValue];
     }
     //Return class completed
     return qcm;
@@ -89,8 +91,10 @@
             Qcm* qcm = [self extract:dic];
             
             NSLog(@"FROM JSON %@",qcm.nameQcm);
-            
-            [qcms addObject:qcm];
+            if(qcm.isActive == true)
+            {
+                [qcms addObject:qcm];
+            }
         }
     }
 
@@ -147,7 +151,8 @@
                   qcm.nameQcm, QcmWebServiceAdapter.JSON_QCM_NAME,
                   qcm.dateStart, QcmWebServiceAdapter.JSON_QCM_DATE_START,
                   qcm.dateEnd, QcmWebServiceAdapter.JSON_QCM_DATE_END,
-                  qcm.isActive, QcmWebServiceAdapter.JSON_QCM_IS_ACTIVE,nil];
+                  qcm.isActive, QcmWebServiceAdapter.JSON_QCM_IS_ACTIVE,
+                  qcm.idType, QcmWebServiceAdapter.JSON_QCM_TYPE,nil];
     }
     return result;
 }

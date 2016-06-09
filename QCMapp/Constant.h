@@ -18,4 +18,10 @@
 //Title message
 -(NSString*) MESSAGE_ALERT_INFO;
 
+//Info for the user login
+-(NSString*) MESSAGE_ALERT_LOGIN;
+
+//Info if the user not exist
+-(NSString*) MESSAGE_ALERT_NOT_EXIST;
+
 @end

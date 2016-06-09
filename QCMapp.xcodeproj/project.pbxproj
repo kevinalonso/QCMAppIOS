@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2ACA721D095F6800B7E308 /* AlertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2ACA711D095F6800B7E308 /* AlertInfo.m */; };
 		EC4D6E171C8F1EE900CEE909 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4D6E161C8F1EE900CEE909 /* WelcomeViewController.m */; };
 		EC6B5D741C8DAE6800DB81DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D731C8DAE6800DB81DD /* main.m */; };
 		EC6B5D771C8DAE6800DB81DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5D761C8DAE6800DB81DD /* AppDelegate.m */; };
@@ -45,6 +46,8 @@
 		EC6B5DFC1C8EC93600DB81DD /* weatherWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DFB1C8EC93600DB81DD /* weatherWebServiceAdapter.m */; };
 		EC6B5DFF1C8ECACC00DB81DD /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5DFE1C8ECACC00DB81DD /* Weather.m */; };
 		EC6B5E021C8F024400DB81DD /* QcmWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */; };
+		ECBF3D821D07789B00EF4D6A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBF3D811D07789B00EF4D6A /* Type.m */; };
+		ECBF3D851D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBF3D841D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.m */; };
 		ECC7727E1CC62828001D6C23 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC7727D1CC62828001D6C23 /* QuestionViewController.m */; };
 		ECC772841CC68944001D6C23 /* QuestionWebServiceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC772831CC68944001D6C23 /* QuestionWebServiceAdapter.m */; };
 		ECC772871CC8C6F2001D6C23 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC772861CC8C6F2001D6C23 /* check.png */; };
@@ -66,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC2ACA701D095F6800B7E308 /* AlertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInfo.h; sourceTree = "<group>"; };
+		EC2ACA711D095F6800B7E308 /* AlertInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertInfo.m; sourceTree = "<group>"; };
 		EC4D6E151C8F1EE900CEE909 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = welcomeController/WelcomeViewController.h; sourceTree = "<group>"; };
 		EC4D6E161C8F1EE900CEE909 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = welcomeController/WelcomeViewController.m; sourceTree = "<group>"; };
 		EC6B5D6F1C8DAE6800DB81DD /* QCMapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCMapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +147,10 @@
 		EC6B5DFE1C8ECACC00DB81DD /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		EC6B5E001C8F024400DB81DD /* QcmWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QcmWebServiceAdapter.h; sourceTree = "<group>"; };
 		EC6B5E011C8F024400DB81DD /* QcmWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QcmWebServiceAdapter.m; sourceTree = "<group>"; };
+		ECBF3D801D07789B00EF4D6A /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		ECBF3D811D07789B00EF4D6A /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
+		ECBF3D831D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserQcmWebServiceAdapter.h; sourceTree = "<group>"; };
+		ECBF3D841D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserQcmWebServiceAdapter.m; sourceTree = "<group>"; };
 		ECC7727C1CC62828001D6C23 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		ECC7727D1CC62828001D6C23 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		ECC772821CC68944001D6C23 /* QuestionWebServiceAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionWebServiceAdapter.h; sourceTree = "<group>"; };
@@ -177,6 +186,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC2ACA6F1D095F4500B7E308 /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				EC2ACA701D095F6800B7E308 /* AlertInfo.h */,
+				EC2ACA711D095F6800B7E308 /* AlertInfo.m */,
+			);
+			name = alert;
+			sourceTree = "<group>";
+		};
 		EC4D6E141C8F1EAE00CEE909 /* welcomeController */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +225,7 @@
 		EC6B5D711C8DAE6800DB81DD /* QCMapp */ = {
 			isa = PBXGroup;
 			children = (
+				EC2ACA6F1D095F4500B7E308 /* alert */,
 				ECC7728E1CC96FA4001D6C23 /* const */,
 				ECC772851CC8C637001D6C23 /* picture */,
 				ECC7727B1CC62755001D6C23 /* questionController */,
@@ -264,6 +283,8 @@
 				EC6B5DFE1C8ECACC00DB81DD /* Weather.m */,
 				ECC7729D1CDAB38D001D6C23 /* UserQcm.h */,
 				ECC7729E1CDAB38D001D6C23 /* UserQcm.m */,
+				ECBF3D801D07789B00EF4D6A /* Type.h */,
+				ECBF3D811D07789B00EF4D6A /* Type.m */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -373,6 +394,8 @@
 				ECC7728C1CC8F3E2001D6C23 /* BadAnswerWebServiceAdapter.m */,
 				ECC7729A1CDA3266001D6C23 /* UserAnswerWebServiceAdapter.h */,
 				ECC7729B1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m */,
+				ECBF3D831D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.h */,
+				ECBF3D841D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.m */,
 			);
 			name = webservice;
 			sourceTree = "<group>";
@@ -507,6 +530,7 @@
 			files = (
 				EC6B5DB11C8DC4EE00DB81DD /* DAOGoodAnswer.m in Sources */,
 				EC6B5DF51C8EC4D400DB81DD /* UIImageView+AFNetworking.m in Sources */,
+				ECBF3D821D07789B00EF4D6A /* Type.m in Sources */,
 				EC6B5E021C8F024400DB81DD /* QcmWebServiceAdapter.m in Sources */,
 				EC6B5DF41C8EC4D400DB81DD /* UIButton+AFNetworking.m in Sources */,
 				EC6B5DFC1C8EC93600DB81DD /* weatherWebServiceAdapter.m in Sources */,
@@ -543,6 +567,8 @@
 				EC6B5DF81C8EC4D400DB81DD /* UIWebView+AFNetworking.m in Sources */,
 				ECC7729C1CDA3267001D6C23 /* UserAnswerWebServiceAdapter.m in Sources */,
 				EC6B5DAB1C8DBCCF00DB81DD /* QcmData.xcdatamodeld in Sources */,
+				ECBF3D851D07F8AC00EF4D6A /* UserQcmWebServiceAdapter.m in Sources */,
+				EC2ACA721D095F6800B7E308 /* AlertInfo.m in Sources */,
 				EC6B5D741C8DAE6800DB81DD /* main.m in Sources */,
 				EC6B5DF11C8EC4D400DB81DD /* AFImageDownloader.m in Sources */,
 			);

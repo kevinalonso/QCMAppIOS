@@ -13,6 +13,7 @@
 #import "Constant.h"
 #import "AnswerUser.h"
 #import "UserAnswerWebServiceAdapter.h"
+#import "AlertInfo.h"
 
 @interface QuestionViewController ()
 
@@ -53,13 +54,13 @@
     DAOBadAnswer* daoBadAnswer = [DAOBadAnswer new];
     
     //Create checkbox
-    checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 135,20, 20)];
+    checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 240,20, 20)];
     [checkbox1 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     
-    checkbox2 = [[UIButton alloc] initWithFrame:CGRectMake(10, 200,20, 20)];
+    checkbox2 = [[UIButton alloc] initWithFrame:CGRectMake(10, 292,20, 20)];
     [checkbox2 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     
-    checkbox3 = [[UIButton alloc] initWithFrame:CGRectMake(10, 260,20, 20)];
+    checkbox3 = [[UIButton alloc] initWithFrame:CGRectMake(10, 345,20, 20)];
     [checkbox3 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     
     //Get the first question and goodAnswer and badAnswer
@@ -134,19 +135,9 @@
     if(start == YES || counter == 0){
         
         Constant* constant = [Constant new];
-        UIAlertController * alert = [UIAlertController alertControllerWithTitle:constant.MESSAGE_ALERT_INFO
-            message:constant.MESSAGE_ALERT_PREV
-            preferredStyle:UIAlertControllerStyleAlert];
+        AlertInfo* alertInfo = [AlertInfo new];
+        [alertInfo alerMessage:self :constant.MESSAGE_ALERT_PREV];
         
-        [self presentViewController:alert animated:YES completion:nil];
-        //Alert for the user (Toast message)
-        UIAlertAction* ok = [UIAlertAction
-            actionWithTitle:@"OK"
-            style:UIAlertActionStyleDefault
-            handler:^(UIAlertAction * action){
-                [alert dismissViewControllerAnimated:YES completion:nil];
-            }];
-        [alert addAction:ok];
     } else {
         counter = counter - 1;
         //Go to the previous question

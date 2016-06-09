@@ -1,19 +1,21 @@
 //
-//  QCMappTests.m
-//  QCMappTests
+//  WebService.m
+//  QCMapp
 //
-//  Created by etudiant on 07/03/2016.
+//  Created by etudiant on 12/05/2016.
 //  Copyright © 2016 etudiant. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "AFNetworking.h"
 
 
-@interface QCMappTests : XCTestCase
+
+@interface WebService : XCTestCase
 
 @end
 
-@implementation QCMappTests
+@implementation WebService
 
 - (void)setUp {
     [super setUp];
@@ -26,8 +28,10 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // Creating the mocks and the retriever can be placed in the setUp method.
+    
+    
+    
 }
 
 - (void)testPerformanceExample {
