@@ -47,6 +47,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="wMA-mV-Ppk"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="identityUser" destination="7s4-c4-Eee" id="5Om-mT-zyt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO2-LI-Ain" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,6 +19,8 @@
 +(NSString*)JSON_QCM_ID;
 +(NSString*)JSON_QUESTION_ID;
 +(NSString *)URL_POST_ANSWER;
++(NSString*)JSON_USER_ID;
++(NSString*)JSON_POINT;
 
 //Create userAnswer in databse from the mobile
 -(void)createUserAnswer:(AnswerUser*) answerUser withCallback:(void (^)(AnswerUser*))callback;

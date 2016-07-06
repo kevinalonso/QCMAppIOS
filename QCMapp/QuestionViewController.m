@@ -14,6 +14,7 @@
 #import "AnswerUser.h"
 #import "UserAnswerWebServiceAdapter.h"
 #import "AlertInfo.h"
+#import "welcomeController/WelcomeViewController.h"
 
 @interface QuestionViewController ()
 
@@ -38,6 +39,7 @@
 @synthesize idBadAnswer;
 @synthesize idQuestionReadNow;
 @synthesize idQcm;
+@synthesize idUser;
 
 @synthesize start;
 
@@ -56,12 +58,16 @@
     //Create checkbox
     checkbox1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 240,20, 20)];
     [checkbox1 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [checkbox1 setTitle:@"bad" forState:UIControlStateNormal];
+    checkbox1.titleLabel.layer.opacity = 0.0f;
     
     checkbox2 = [[UIButton alloc] initWithFrame:CGRectMake(10, 292,20, 20)];
     [checkbox2 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     
     checkbox3 = [[UIButton alloc] initWithFrame:CGRectMake(10, 345,20, 20)];
     [checkbox3 addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [checkbox3 setTitle:@"bad" forState:UIControlStateNormal];
+    checkbox3.titleLabel.layer.opacity = 0.0f;
     
     //Get the first question and goodAnswer and badAnswer
     for (int j = 0; j < 1; j++) {
@@ -183,9 +189,14 @@
             answerUser.sendAnswer = item.sendAnswer;
             answerUser.sendQcm = item.sendQcm;
             answerUser.sendQuestion = item.sendQuestion;
+            answerUser.idUserConnect = item.idUserConnect;
+            answerUser.pointAnswer = item.pointAnswer;
+            
         };
         [userAnswerWebServiceAdapter createUserAnswer:item withCallback:callback];
     }
+    //WelcomeViewController *wvc = [[WelcomeViewController alloc] init];
+    //[self presentViewController:wvc animated:YES completion:nil];
 }
 
 //Button to go to the next question
@@ -252,15 +263,23 @@
 -(void)buttonEvent:(UIButton* )btn {
     if(!btn.isSelected)
     {
+        int point;
         [btn setSelected:YES];
         //Add puce in checkbox
         [btn setImage:[UIImage imageNamed:@"check.png"] forState:UIControlStateSelected];
+        if([btn.titleLabel.text  isEqual: @"bad"]){
+            point = 0;
+        } else {
+            point = 1;
+        }
         
         //Get answer from user
         setAnswerUser = [AnswerUser new];
         setAnswerUser.sendAnswer = btn.tag;
         setAnswerUser.sendQcm = [self getId:idQcm];
         setAnswerUser.sendQuestion = [self getId:idQuestionReadNow];
+        setAnswerUser.idUserConnect = idUser;
+        setAnswerUser.pointAnswer = point;
         
         //[userAnswerSend addObject:setAnswerUser];
         

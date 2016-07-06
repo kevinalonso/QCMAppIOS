@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordEditText;
 
 @property bool checked;
+@property NSString* loginGet;
+@property NSString* idUserGet;
 
 //Button to access Qcm list
 - (IBAction)sendConnectionQcm:(id)sender;

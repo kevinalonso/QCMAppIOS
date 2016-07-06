@@ -19,7 +19,7 @@
 +(NSString*) JSON_USER_PASSWORD{ return @"password"; }
 +(NSString *)JSON_USER_TYPE{ return @"idType"; }
 +(NSString*) JSON_ARRAY_USER{ return @"users"; }
-+(NSString *)URL_ALL_USER{ return @"http://192.168.0.47/QCM/web/app_dev.php/api/all/users"; }
++(NSString *)URL_ALL_USER{ return @"http://192.168.1.14/app_dev.php/api/all/users"; }
 
 //EXTRACT USER FROM JSON FLOW
 -(NSMutableArray*)extractAll:(NSDictionary*)json{

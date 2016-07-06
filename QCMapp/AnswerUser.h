@@ -19,4 +19,9 @@
 //Id Qcm
 @property NSInteger sendQcm;
 
+//Id User
+@property NSInteger idUserConnect;
+
+@property NSInteger pointAnswer;
+
 @end

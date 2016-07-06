@@ -22,9 +22,14 @@
 @implementation WelcomeViewController
 @synthesize resQcm;
 @synthesize appDelegate;
+@synthesize segueLogin;
+@synthesize segueId;
+@synthesize identityUser;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    identityUser.text = [NSString stringWithFormat:@" Bonjour %@",segueLogin];
     
     appDelegate = [[UIApplication sharedApplication]delegate];
     NSManagedObjectContext* context = appDelegate.managedObjectContext;
@@ -126,6 +131,7 @@
     //Add id Qcm to the variable in question view and the question link to this qcm
     questionViewController.idQcm = idSelected;
     questionViewController.resultQuestionFromQcm = res;
+    questionViewController.idUser = [segueId integerValue];
 
 }
 

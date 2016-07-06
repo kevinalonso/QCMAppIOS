@@ -59,6 +59,7 @@
 @property NSManagedObject* idBadAnswer;
 @property NSManagedObject* idQuestionReadNow;
 @property NSManagedObject* idQcm;
+@property NSInteger idUser;
 
 //Variable for the navigation
 @property BOOL start;

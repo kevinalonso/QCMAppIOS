@@ -16,7 +16,9 @@
 
 +(NSString*)JSON_SENDANSWER{return @"idAnswer";}
 +(NSString*)JSON_QCM_ID{ return @"idQcm";}
-+(NSString*)JSON_QUESTION_ID{ return @"isQuestion";}
++(NSString*)JSON_QUESTION_ID{ return @"idQuestion";}
++(NSString*)JSON_USER_ID{ return @"idUser";}
++(NSString*)JSON_POINT{ return @"point";}
 +(NSString *)URL_POST_ANSWER{ return @"http://192.168.1.14/app_dev.php/api/answers/users/new";}
 
 //CREATE USERANSWER
@@ -38,7 +40,7 @@
     }];
 }
 
-//EXTRACT BADANSWER IN JSON FLOW
+//EXTRACT ANSWER IN JSON FLOW
 -(AnswerUser*)extract:(NSDictionary*)json{
     AnswerUser* answerUser = nil;
     if (json != nil) {
@@ -47,6 +49,8 @@
         answerUser.sendAnswer = [[json objectForKey:UserAnswerWebServiceAdapter.JSON_SENDANSWER]integerValue];
         answerUser.sendQcm = [[json objectForKey:UserAnswerWebServiceAdapter.JSON_QCM_ID]integerValue];
         answerUser.sendQuestion = [[json objectForKey:UserAnswerWebServiceAdapter.JSON_QUESTION_ID]integerValue];
+        answerUser.idUserConnect = [[json objectForKey:UserAnswerWebServiceAdapter.JSON_USER_ID]integerValue];
+        answerUser.pointAnswer = [[json objectForKey:UserAnswerWebServiceAdapter.JSON_POINT]integerValue];
     }
     //Return class completed
     return answerUser;
@@ -59,7 +63,10 @@
         result = [NSDictionary dictionaryWithObjectsAndKeys:
                   [NSNumber numberWithInteger:answerUser.sendAnswer],UserAnswerWebServiceAdapter.JSON_SENDANSWER,
                   [NSNumber numberWithInteger:answerUser.sendQcm], UserAnswerWebServiceAdapter.JSON_QCM_ID,
-                  [NSNumber numberWithInteger:answerUser.sendQuestion], UserAnswerWebServiceAdapter.JSON_QUESTION_ID ,nil];
+                  [NSNumber numberWithInteger:answerUser.sendQuestion], UserAnswerWebServiceAdapter.JSON_QUESTION_ID,
+                  [NSNumber numberWithInteger:answerUser.idUserConnect], UserAnswerWebServiceAdapter.JSON_USER_ID,
+                  [NSNumber numberWithInteger:answerUser.pointAnswer],
+                  UserAnswerWebServiceAdapter.JSON_POINT ,nil];
     }
     return result;
 }
